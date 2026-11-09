@@ -1,0 +1,337 @@
+{
+  "stages": [
+    {
+      "prefix_lines": 7,
+      "fixtures": [
+        "outside_1",
+        "outside_2",
+        "mixed",
+        "inside"
+      ],
+      "point_addresses": 33,
+      "distinct_candidate_lines": 104,
+      "successful_extensions": [
+        {
+          "points": [
+            "S",
+            "Up"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        }
+      ],
+      "distinct_axis_points": 1,
+      "already_present_axis_points": 0,
+      "new_axis_points": 1,
+      "scope": "one new line, rational prefix points, old line carriers only",
+      "minimality_proved": false
+    },
+    {
+      "prefix_lines": 8,
+      "fixtures": [
+        "outside_1",
+        "outside_2",
+        "mixed",
+        "inside"
+      ],
+      "point_addresses": 40,
+      "distinct_candidate_lines": 165,
+      "successful_extensions": [
+        {
+          "points": [
+            "A",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "A",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "B",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "B",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "O",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "O",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "R",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "R",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "V",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "V",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "Vp",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "Vp",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "W",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "W",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l1:l3",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l1:l3",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l1:l5",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l1:l5",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l2:l5",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l2:l5",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l3:l4",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l3:l4",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l4:l6",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l4:l6",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l5:l6",
+            "meet:l7:l10"
+          ],
+          "carrier": "l7",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        },
+        {
+          "points": [
+            "meet:l5:l6",
+            "meet:l7:l10"
+          ],
+          "carrier": "l10",
+          "first_point": [
+            "1927/8243",
+            "-9040/8243"
+          ]
+        }
+      ],
+      "distinct_axis_points": 1,
+      "already_present_axis_points": 1,
+      "new_axis_points": 0,
+      "scope": "one new line, rational prefix points, old line carriers only",
+      "minimality_proved": false
+    }
+  ]
+}

@@ -1,0 +1,7056 @@
+{
+  "profile_id": "castillon-d2-e-generic-v1",
+  "profile_sha256": "555abb3c16de5d7773d855de1b66a200514d1df4b87c8ef691cb354914512f21",
+  "metric": "e_move",
+  "claim": "exact fixture replays; no minimality claim",
+  "reports": [
+    {
+      "fixture": "outside_1",
+      "input": [
+        [
+          "7/3",
+          "0"
+        ],
+        [
+          "-2",
+          "4/3"
+        ],
+        [
+          "5/4",
+          "-2"
+        ]
+      ],
+      "valid": true,
+      "scores": {
+        "axis": {
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0
+        },
+        "one_vertices": {
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0
+        },
+        "one_edges": {
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0
+        },
+        "all_vertices": {
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0
+        },
+        "all_edges": {
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0
+        }
+      },
+      "programs": {
+        "axis": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-7/25",
+              "-24/25"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-1081/1369",
+              "-840/1369"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-65/97",
+              "72/97"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "8145/17393",
+              "-15368/17393"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "91/109",
+              "-60/109"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-128/467",
+              "-3955/1868"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "1927/8243",
+              "-9040/8243"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          }
+        ],
+        "one_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-7/25",
+              "-24/25"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-1081/1369",
+              "-840/1369"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-65/97",
+              "72/97"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "8145/17393",
+              "-15368/17393"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "91/109",
+              "-60/109"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-128/467",
+              "-3955/1868"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "1927/8243",
+              "-9040/8243"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "-200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "-403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-20451/260657",
+                "b": "-200660/260657",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-16116/260657",
+                "b": "254635/260657",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "87/2125",
+                "b": "508/425",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "348/2125",
+                "b": "-127/425",
+                "sqrt": "258056/403225"
+              }
+            ]
+          }
+        ],
+        "one_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-7/25",
+              "-24/25"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-1081/1369",
+              "-840/1369"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-65/97",
+              "72/97"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "8145/17393",
+              "-15368/17393"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "91/109",
+              "-60/109"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-128/467",
+              "-3955/1868"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "1927/8243",
+              "-9040/8243"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "-200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "-403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-20451/260657",
+                "b": "-200660/260657",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-16116/260657",
+                "b": "254635/260657",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "87/2125",
+                "b": "508/425",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "348/2125",
+                "b": "-127/425",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          }
+        ],
+        "all_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-7/25",
+              "-24/25"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-1081/1369",
+              "-840/1369"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-65/97",
+              "72/97"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "8145/17393",
+              "-15368/17393"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "91/109",
+              "-60/109"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-128/467",
+              "-3955/1868"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "1927/8243",
+              "-9040/8243"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "-200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "-403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-20451/260657",
+                "b": "-200660/260657",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-16116/260657",
+                "b": "254635/260657",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "87/2125",
+                "b": "508/425",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "348/2125",
+                "b": "-127/425",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-20451/260657",
+                "b": "200660/260657",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-16116/260657",
+                "b": "-254635/260657",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "87/2125",
+                "b": "-508/425",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "348/2125",
+                "b": "127/425",
+                "sqrt": "258056/403225"
+              }
+            ]
+          }
+        ],
+        "all_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-7/25",
+              "-24/25"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-1081/1369",
+              "-840/1369"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-65/97",
+              "72/97"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "8145/17393",
+              "-15368/17393"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "91/109",
+              "-60/109"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-128/467",
+              "-3955/1868"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "1927/8243",
+              "-9040/8243"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "314325/503081",
+                "b": "-200660/503081",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-156420/503081",
+                "b": "-403225/503081",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-20451/260657",
+                "b": "-200660/260657",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-16116/260657",
+                "b": "254635/260657",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "87/2125",
+                "b": "508/425",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "348/2125",
+                "b": "-127/425",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-20451/260657",
+                "b": "200660/260657",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "-16116/260657",
+                "b": "-254635/260657",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 16,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "87/2125",
+                "b": "-508/425",
+                "sqrt": "258056/403225"
+              },
+              {
+                "a": "348/2125",
+                "b": "127/425",
+                "sqrt": "258056/403225"
+              }
+            ]
+          },
+          {
+            "E": 17,
+            "op": "line",
+            "id": "edge_C_1",
+            "points": [
+              "Z1",
+              "X1"
+            ],
+            "duplicate": false
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "outside_2",
+      "input": [
+        [
+          "9/4",
+          "0"
+        ],
+        [
+          "-7/3",
+          "6/5"
+        ],
+        [
+          "4/3",
+          "-9/4"
+        ]
+      ],
+      "valid": true,
+      "scores": {
+        "axis": {
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0
+        },
+        "one_vertices": {
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0
+        },
+        "one_edges": {
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0
+        },
+        "all_vertices": {
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0
+        },
+        "all_edges": {
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0
+        }
+      },
+      "programs": {
+        "axis": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "19/181",
+              "-180/181"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-79765/80413",
+              "10188/80413"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "240464/648785",
+              "-602577/648785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "11189/16189",
+              "-11700/16189"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "55/1513",
+              "-1512/1513"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-21979/18207",
+              "-533738/163863"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "76913/609591",
+              "-220662/203197"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          }
+        ],
+        "one_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "19/181",
+              "-180/181"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-79765/80413",
+              "10188/80413"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "240464/648785",
+              "-602577/648785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "11189/16189",
+              "-11700/16189"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "55/1513",
+              "-1512/1513"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-21979/18207",
+              "-533738/163863"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "76913/609591",
+              "-220662/203197"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "-12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "-20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-2898728/46989615",
+                "b": "-12757842/15663205",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-966588/15663205",
+                "b": "12753284/15663205",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "114328/5307255",
+                "b": "2000962/1769085",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "809516/5307255",
+                "b": "-282596/1769085",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          }
+        ],
+        "one_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "19/181",
+              "-180/181"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-79765/80413",
+              "10188/80413"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "240464/648785",
+              "-602577/648785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "11189/16189",
+              "-11700/16189"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "55/1513",
+              "-1512/1513"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-21979/18207",
+              "-533738/163863"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "76913/609591",
+              "-220662/203197"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "-12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "-20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-2898728/46989615",
+                "b": "-12757842/15663205",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-966588/15663205",
+                "b": "12753284/15663205",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "114328/5307255",
+                "b": "2000962/1769085",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "809516/5307255",
+                "b": "-282596/1769085",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          }
+        ],
+        "all_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "19/181",
+              "-180/181"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-79765/80413",
+              "10188/80413"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "240464/648785",
+              "-602577/648785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "11189/16189",
+              "-11700/16189"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "55/1513",
+              "-1512/1513"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-21979/18207",
+              "-533738/163863"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "76913/609591",
+              "-220662/203197"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "-12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "-20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-2898728/46989615",
+                "b": "-12757842/15663205",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-966588/15663205",
+                "b": "12753284/15663205",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "114328/5307255",
+                "b": "2000962/1769085",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "809516/5307255",
+                "b": "-282596/1769085",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-2898728/46989615",
+                "b": "12757842/15663205",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-966588/15663205",
+                "b": "-12753284/15663205",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "114328/5307255",
+                "b": "-2000962/1769085",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "809516/5307255",
+                "b": "282596/1769085",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          }
+        ],
+        "all_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "19/181",
+              "-180/181"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-79765/80413",
+              "10188/80413"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "240464/648785",
+              "-602577/648785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "11189/16189",
+              "-11700/16189"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "55/1513",
+              "-1512/1513"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-21979/18207",
+              "-533738/163863"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "76913/609591",
+              "-220662/203197"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "49426952/85829295",
+                "b": "-12757842/28609765",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-10117452/28609765",
+                "b": "-20775364/28609765",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-2898728/46989615",
+                "b": "-12757842/15663205",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-966588/15663205",
+                "b": "12753284/15663205",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "114328/5307255",
+                "b": "2000962/1769085",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "809516/5307255",
+                "b": "-282596/1769085",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-2898728/46989615",
+                "b": "12757842/15663205",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "-966588/15663205",
+                "b": "-12753284/15663205",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 16,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "114328/5307255",
+                "b": "-2000962/1769085",
+                "sqrt": "139895549/186978276"
+              },
+              {
+                "a": "809516/5307255",
+                "b": "282596/1769085",
+                "sqrt": "139895549/186978276"
+              }
+            ]
+          },
+          {
+            "E": 17,
+            "op": "line",
+            "id": "edge_C_1",
+            "points": [
+              "Z1",
+              "X1"
+            ],
+            "duplicate": false
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "mixed",
+      "input": [
+        [
+          "2/5",
+          "0"
+        ],
+        [
+          "-5/2",
+          "4/3"
+        ],
+        [
+          "7/3",
+          "6/5"
+        ]
+      ],
+      "valid": true,
+      "scores": {
+        "axis": {
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0
+        },
+        "one_vertices": {
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0
+        },
+        "one_edges": {
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0
+        },
+        "all_vertices": {
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0
+        },
+        "all_edges": {
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0
+        }
+      },
+      "programs": {
+        "axis": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "78637/79285",
+              "-10116/79285"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-377/505",
+              "336/505"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "66424/138785",
+              "121857/138785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2407/3865",
+              "3024/3865"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "44045/40817",
+              "-5436/40817"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "4751/5819",
+              "19026/29095"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          }
+        ],
+        "one_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "78637/79285",
+              "-10116/79285"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-377/505",
+              "336/505"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "66424/138785",
+              "121857/138785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2407/3865",
+              "3024/3865"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "44045/40817",
+              "-5436/40817"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "4751/5819",
+              "19026/29095"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "-3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "-9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1831005/2601889",
+                "b": "3241680/2601889",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1544400/2601889",
+                "b": "-3843261/2601889",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1543275/2427289",
+                "b": "-3491040/2427289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1596000/2427289",
+                "b": "3375711/2427289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          }
+        ],
+        "one_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "78637/79285",
+              "-10116/79285"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-377/505",
+              "336/505"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "66424/138785",
+              "121857/138785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2407/3865",
+              "3024/3865"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "44045/40817",
+              "-5436/40817"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "4751/5819",
+              "19026/29095"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "-3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "-9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1831005/2601889",
+                "b": "3241680/2601889",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1544400/2601889",
+                "b": "-3843261/2601889",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1543275/2427289",
+                "b": "-3491040/2427289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1596000/2427289",
+                "b": "3375711/2427289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          }
+        ],
+        "all_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "78637/79285",
+              "-10116/79285"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-377/505",
+              "336/505"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "66424/138785",
+              "121857/138785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2407/3865",
+              "3024/3865"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "44045/40817",
+              "-5436/40817"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "4751/5819",
+              "19026/29095"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "-3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "-9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1831005/2601889",
+                "b": "3241680/2601889",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1544400/2601889",
+                "b": "-3843261/2601889",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1543275/2427289",
+                "b": "-3491040/2427289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1596000/2427289",
+                "b": "3375711/2427289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1831005/2601889",
+                "b": "-3241680/2601889",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1544400/2601889",
+                "b": "3843261/2601889",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1543275/2427289",
+                "b": "3491040/2427289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1596000/2427289",
+                "b": "-3375711/2427289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          }
+        ],
+        "all_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "17/145",
+              "-144/145"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "78637/79285",
+              "-10116/79285"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-377/505",
+              "336/505"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "66424/138785",
+              "121857/138785"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2407/3865",
+              "3024/3865"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "272/353",
+              "225/353"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "44045/40817",
+              "-5436/40817"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "4751/5819",
+              "19026/29095"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "-3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "10052325/10797289",
+                "b": "3241680/10797289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "3354000/10797289",
+                "b": "-9715689/10797289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1831005/2601889",
+                "b": "3241680/2601889",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1544400/2601889",
+                "b": "-3843261/2601889",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1543275/2427289",
+                "b": "-3491040/2427289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1596000/2427289",
+                "b": "3375711/2427289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1831005/2601889",
+                "b": "-3241680/2601889",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1544400/2601889",
+                "b": "3843261/2601889",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 16,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-1543275/2427289",
+                "b": "3491040/2427289",
+                "sqrt": "396664/9715689"
+              },
+              {
+                "a": "-1596000/2427289",
+                "b": "-3375711/2427289",
+                "sqrt": "396664/9715689"
+              }
+            ]
+          },
+          {
+            "E": 17,
+            "op": "line",
+            "id": "edge_C_1",
+            "points": [
+              "Z1",
+              "X1"
+            ],
+            "duplicate": false
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "inside",
+      "input": [
+        [
+          "4/5",
+          "0"
+        ],
+        [
+          "-3/5",
+          "1/2"
+        ],
+        [
+          "-2/5",
+          "-7/10"
+        ]
+      ],
+      "valid": true,
+      "scores": {
+        "axis": {
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0
+        },
+        "one_vertices": {
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0
+        },
+        "one_edges": {
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0
+        },
+        "all_vertices": {
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0
+        },
+        "all_edges": {
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0
+        }
+      },
+      "programs": {
+        "axis": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-9/41",
+              "40/41"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-4917/11645",
+              "-10556/11645"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-231/281",
+              "160/281"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "-15963/50285",
+              "-47684/50285"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2009/2041",
+              "-360/2041"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "-13/85",
+              "-84/85"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-2241/6040",
+              "-11921/12080"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "-1063/4600",
+              "-8253/9200"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          }
+        ],
+        "one_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-9/41",
+              "40/41"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-4917/11645",
+              "-10556/11645"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-231/281",
+              "160/281"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "-15963/50285",
+              "-47684/50285"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2009/2041",
+              "-360/2041"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "-13/85",
+              "-84/85"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-2241/6040",
+              "-11921/12080"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "-1063/4600",
+              "-8253/9200"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "-1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "-1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "4085/20936",
+                "b": "-7208/13085",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "5035/10468",
+                "b": "2924/13085",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-11999/16573",
+                "b": "6392/82865",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-7943/66292",
+                "b": "-38624/82865",
+                "sqrt": "611815/295936"
+              }
+            ]
+          }
+        ],
+        "one_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-9/41",
+              "40/41"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-4917/11645",
+              "-10556/11645"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-231/281",
+              "160/281"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "-15963/50285",
+              "-47684/50285"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2009/2041",
+              "-360/2041"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "-13/85",
+              "-84/85"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-2241/6040",
+              "-11921/12080"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "-1063/4600",
+              "-8253/9200"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "-1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "-1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "4085/20936",
+                "b": "-7208/13085",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "5035/10468",
+                "b": "2924/13085",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-11999/16573",
+                "b": "6392/82865",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-7943/66292",
+                "b": "-38624/82865",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          }
+        ],
+        "all_vertices": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-9/41",
+              "40/41"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-4917/11645",
+              "-10556/11645"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-231/281",
+              "160/281"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "-15963/50285",
+              "-47684/50285"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2009/2041",
+              "-360/2041"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "-13/85",
+              "-84/85"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-2241/6040",
+              "-11921/12080"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "-1063/4600",
+              "-8253/9200"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "-1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "-1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "4085/20936",
+                "b": "-7208/13085",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "5035/10468",
+                "b": "2924/13085",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-11999/16573",
+                "b": "6392/82865",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-7943/66292",
+                "b": "-38624/82865",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "4085/20936",
+                "b": "7208/13085",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "5035/10468",
+                "b": "-2924/13085",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-11999/16573",
+                "b": "-6392/82865",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-7943/66292",
+                "b": "38624/82865",
+                "sqrt": "611815/295936"
+              }
+            ]
+          }
+        ],
+        "all_edges": [
+          {
+            "E": 1,
+            "op": "line",
+            "id": "l1",
+            "points": [
+              "O",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "U",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "-1",
+              "0"
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "V",
+            "objects": [
+              "l1",
+              "Gamma"
+            ],
+            "value": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "E": 2,
+            "op": "line",
+            "id": "l2",
+            "points": [
+              "U",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "W",
+            "objects": [
+              "l2",
+              "Gamma"
+            ],
+            "value": [
+              "-9/41",
+              "40/41"
+            ]
+          },
+          {
+            "E": 3,
+            "op": "line",
+            "id": "l3",
+            "points": [
+              "W",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Vp",
+            "objects": [
+              "l3",
+              "Gamma"
+            ],
+            "value": [
+              "-4917/11645",
+              "-10556/11645"
+            ]
+          },
+          {
+            "E": 4,
+            "op": "line",
+            "id": "l4",
+            "points": [
+              "V",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "R",
+            "objects": [
+              "l4",
+              "Gamma"
+            ],
+            "value": [
+              "-231/281",
+              "160/281"
+            ]
+          },
+          {
+            "E": 5,
+            "op": "line",
+            "id": "l5",
+            "points": [
+              "R",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Up",
+            "objects": [
+              "l5",
+              "Gamma"
+            ],
+            "value": [
+              "-15963/50285",
+              "-47684/50285"
+            ]
+          },
+          {
+            "E": 6,
+            "op": "line",
+            "id": "l6",
+            "points": [
+              "W",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "S",
+            "objects": [
+              "l6",
+              "Gamma"
+            ],
+            "value": [
+              "2009/2041",
+              "-360/2041"
+            ]
+          },
+          {
+            "E": 7,
+            "op": "line",
+            "id": "l7",
+            "points": [
+              "U",
+              "C"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Sp",
+            "objects": [
+              "l7",
+              "Gamma"
+            ],
+            "value": [
+              "-13/85",
+              "-84/85"
+            ]
+          },
+          {
+            "E": 8,
+            "op": "line",
+            "id": "l8",
+            "points": [
+              "U",
+              "Vp"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 9,
+            "op": "line",
+            "id": "l9",
+            "points": [
+              "V",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "J",
+            "objects": [
+              "l8",
+              "l9"
+            ],
+            "value": [
+              "-2241/6040",
+              "-11921/12080"
+            ]
+          },
+          {
+            "E": 10,
+            "op": "line",
+            "id": "l10",
+            "points": [
+              "S",
+              "Up"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "H",
+            "objects": [
+              "l7",
+              "l10"
+            ],
+            "value": [
+              "-1063/4600",
+              "-8253/9200"
+            ]
+          },
+          {
+            "E": 11,
+            "op": "line",
+            "id": "axis",
+            "points": [
+              "J",
+              "H"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "X0",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "op": "intersect",
+            "id": "X1",
+            "objects": [
+              "axis",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "2159/6344",
+                "b": "-1802/3965",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-6731/12688",
+                "b": "-1156/3965",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 12,
+            "op": "line",
+            "id": "edge_A_0",
+            "points": [
+              "X0",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y0",
+            "objects": [
+              "edge_A_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "4085/20936",
+                "b": "-7208/13085",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "5035/10468",
+                "b": "2924/13085",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 13,
+            "op": "line",
+            "id": "edge_B_0",
+            "points": [
+              "Y0",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z0",
+            "objects": [
+              "edge_B_0",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-11999/16573",
+                "b": "6392/82865",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-7943/66292",
+                "b": "-38624/82865",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 14,
+            "op": "line",
+            "id": "edge_C_0",
+            "points": [
+              "Z0",
+              "X0"
+            ],
+            "duplicate": false
+          },
+          {
+            "E": 15,
+            "op": "line",
+            "id": "edge_A_1",
+            "points": [
+              "X1",
+              "A"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Y1",
+            "objects": [
+              "edge_A_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "4085/20936",
+                "b": "7208/13085",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "5035/10468",
+                "b": "-2924/13085",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 16,
+            "op": "line",
+            "id": "edge_B_1",
+            "points": [
+              "Y1",
+              "B"
+            ],
+            "duplicate": false
+          },
+          {
+            "op": "intersect",
+            "id": "Z1",
+            "objects": [
+              "edge_B_1",
+              "Gamma"
+            ],
+            "value": [
+              {
+                "a": "-11999/16573",
+                "b": "-6392/82865",
+                "sqrt": "611815/295936"
+              },
+              {
+                "a": "-7943/66292",
+                "b": "38624/82865",
+                "sqrt": "611815/295936"
+              }
+            ]
+          },
+          {
+            "E": 17,
+            "op": "line",
+            "id": "edge_C_1",
+            "points": [
+              "Z1",
+              "X1"
+            ],
+            "duplicate": false
+          }
+        ]
+      }
+    }
+  ]
+}

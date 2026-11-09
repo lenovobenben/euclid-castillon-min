@@ -1,0 +1,91 @@
+{
+  "fixtures": [
+    "outside_1",
+    "outside_2",
+    "mixed",
+    "inside"
+  ],
+  "stages": [
+    {
+      "stage": 7,
+      "prefix_e": 7,
+      "addresses": 33,
+      "candidate_addresses": {
+        "line": 506,
+        "circle": 980
+      },
+      "hits": []
+    },
+    {
+      "stage": 8,
+      "prefix_e": 8,
+      "addresses": 40,
+      "candidate_addresses": {
+        "line": 742,
+        "circle": 1445
+      },
+      "hits": []
+    },
+    {
+      "stage": "8H",
+      "prefix_e": 8,
+      "addresses": 40,
+      "candidate_addresses": {
+        "line": 756,
+        "circle": 1473
+      },
+      "hits": []
+    },
+    {
+      "stage": 9,
+      "prefix_e": 9,
+      "addresses": 49,
+      "candidate_addresses": {
+        "line": 1131,
+        "circle": 2214
+      },
+      "hits": []
+    },
+    {
+      "stage": 10,
+      "prefix_e": 10,
+      "addresses": 59,
+      "candidate_addresses": {
+        "line": 1659,
+        "circle": 3260
+      },
+      "hits": [
+        {
+          "op": "line",
+          "points": [
+            "H",
+            "J"
+          ]
+        },
+        {
+          "op": "line",
+          "points": [
+            "H",
+            "meet:l8:l9"
+          ]
+        },
+        {
+          "op": "line",
+          "points": [
+            "J",
+            "meet:l7:l10"
+          ]
+        },
+        {
+          "op": "line",
+          "points": [
+            "meet:l7:l10",
+            "meet:l8:l9"
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "one move from selected exact rational prefixes",
+  "minimality_proved": false
+}

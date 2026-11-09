@@ -1,0 +1,200 @@
+{
+  "symbolic": {
+    "coefficient_ring": "Multivariate Polynomial Ring in a, bx, by, cx, cy over Rational Field",
+    "three_image_pairs": true,
+    "both_axis_witnesses": true,
+    "generic_axis_nonzero": true,
+    "axis_matches_composite": true,
+    "trace_determinant_identities": true
+  },
+  "independent_replays": [
+    {
+      "fixture": "outside_1",
+      "targets": {
+        "axis": {
+          "valid": true,
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0,
+          "first_target_e": 11
+        },
+        "one_vertices": {
+          "valid": true,
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0,
+          "first_target_e": 13
+        },
+        "one_edges": {
+          "valid": true,
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0,
+          "first_target_e": 14
+        },
+        "all_vertices": {
+          "valid": true,
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0,
+          "first_target_e": 15
+        },
+        "all_edges": {
+          "valid": true,
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0,
+          "first_target_e": 17
+        }
+      }
+    },
+    {
+      "fixture": "outside_2",
+      "targets": {
+        "axis": {
+          "valid": true,
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0,
+          "first_target_e": 11
+        },
+        "one_vertices": {
+          "valid": true,
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0,
+          "first_target_e": 13
+        },
+        "one_edges": {
+          "valid": true,
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0,
+          "first_target_e": 14
+        },
+        "all_vertices": {
+          "valid": true,
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0,
+          "first_target_e": 15
+        },
+        "all_edges": {
+          "valid": true,
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0,
+          "first_target_e": 17
+        }
+      }
+    },
+    {
+      "fixture": "mixed",
+      "targets": {
+        "axis": {
+          "valid": true,
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0,
+          "first_target_e": 11
+        },
+        "one_vertices": {
+          "valid": true,
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0,
+          "first_target_e": 13
+        },
+        "one_edges": {
+          "valid": true,
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0,
+          "first_target_e": 14
+        },
+        "all_vertices": {
+          "valid": true,
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0,
+          "first_target_e": 15
+        },
+        "all_edges": {
+          "valid": true,
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0,
+          "first_target_e": 17
+        }
+      }
+    },
+    {
+      "fixture": "inside",
+      "targets": {
+        "axis": {
+          "valid": true,
+          "lines": 11,
+          "circles": 0,
+          "total": 11,
+          "duplicate_draws": 0,
+          "first_target_e": 11
+        },
+        "one_vertices": {
+          "valid": true,
+          "lines": 13,
+          "circles": 0,
+          "total": 13,
+          "duplicate_draws": 0,
+          "first_target_e": 13
+        },
+        "one_edges": {
+          "valid": true,
+          "lines": 14,
+          "circles": 0,
+          "total": 14,
+          "duplicate_draws": 0,
+          "first_target_e": 14
+        },
+        "all_vertices": {
+          "valid": true,
+          "lines": 15,
+          "circles": 0,
+          "total": 15,
+          "duplicate_draws": 0,
+          "first_target_e": 15
+        },
+        "all_edges": {
+          "valid": true,
+          "lines": 17,
+          "circles": 0,
+          "total": 17,
+          "duplicate_draws": 0,
+          "first_target_e": 17
+        }
+      }
+    }
+  ],
+  "negative_controls": {
+    "incorrect_step_number": "rejected",
+    "unconstructed_point": "rejected",
+    "unknown_defining_point": "rejected",
+    "missing_final_edge": "rejected"
+  },
+  "global_minimality_proved": false,
+  "full_domain_robustness_proved": false
+}
