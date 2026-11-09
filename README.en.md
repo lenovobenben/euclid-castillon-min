@@ -2,7 +2,7 @@
 
 [简体中文](README.md) · **English**
 
-**For generic two-solution inputs with a proper AB secant, draw one triangle with 12 lines, or both with 15 lines.**
+**For two-solution inputs where line AB meets the circle at two distinct points, the general-case construction draws one triangle with 12 lines, or both with 15 lines.**
 
 Given a circle, its center, and three points, construct an inscribed triangle whose side
 lines respectively pass through those points. This project provides step-by-step animations, elementary traces,
@@ -21,8 +21,8 @@ general-parameter proofs, independent exact verification, solution classificatio
 
 | Animation | Target | Scope | Video |
 |---|---|---|---|
-| One solution in 12 E | One complete triangle, using 12 lines | Generic proper AB secant | [4K60 MP4](animations/castillon/media/CastillonOne_12E_4k60.mp4) |
-| Both solutions in 15 E | Two complete triangles, using 15 lines | Generic proper AB secant | [4K60 MP4](animations/castillon/media/CastillonBoth_15E_4k60.mp4) |
+| One solution in 12 E | One complete triangle, using 12 lines | AB meets the circle at two distinct points, general case | [4K60 MP4](animations/castillon/media/CastillonOne_12E_4k60.mp4) |
+| Both solutions in 15 E | Two complete triangles, using 15 lines | AB meets the circle at two distinct points, general case | [4K60 MP4](animations/castillon/media/CastillonBoth_15E_4k60.mp4) |
 
 The videos use a dark blue background, Chinese captions, and thin lines. Magenta denotes free inputs,
 gold the current move, pale blue auxiliary objects, and green the targets. Each draw highlights
@@ -32,37 +32,37 @@ its two existing reference points and shows the cumulative E count. The visual s
 Geometry is exported from exact replay and checked against the committed certificate. The videos use
 the `inside` fixture, with all three given points inside the circle. The first move draws AB.
 Forward and inverse projections produce the fixed-point axis at move 9. Each video starts from
-the free inputs, sharing the first 12 moves. All vertices appear at move 14 in the two-solution
-video. The independent 13 E vertex-only program omits the final side of the first triangle.
+the free inputs, sharing the first 12 moves. The videos complete one triangle at move 12 and
+both triangles at move 15, respectively.
 
 See the [animation guide](animations/castillon/README.md) for geometry export, viewport tests,
 and rendering commands. Detailed mathematical documents are currently in Chinese.
 
 ## Current verified upper bounds
 
-Within the two-solution domain D₂, the two constructions have different input coverage.
+For inputs with two nondegenerate solutions, the table gives the moves needed to draw
+complete triangles in the general case. AB means the full line through the given points A and B.
 
-| Target | Proper AB-secant subdomain `gen`, animated construction | Full D₂ `gen`, center-chord construction |
+| Target | AB meets the circle at two distinct points (animated method) | No restriction on how AB meets the circle |
 |---|---:|---:|
-| Three vertices of one solution `one_vertices` | **11 E** | 13 E |
-| One complete triangle `one_edges` | **12 E** | 14 E |
-| All vertices of both solutions `all_vertices` | **13 E** | 15 E |
-| Both complete triangles `all_edges` | **15 E** | 17 E |
+| One complete triangle | **12 E** | 14 E |
+| Both complete triangles | **15 E** | 17 E |
 
-The animated secant construction requires two distinct real intersections of AB with Γ.
-It includes generic two-solution inputs with all three given points inside the circle.
+The animated method starts from the two intersections of AB with the circle.
+If AB is tangent to or misses the circle, use the other method.
+Having all three given points inside the circle guarantees this intersection condition.
 Starting with AB makes two projection involutions exchange the same pair of circle points.
 Using forward and inverse projections, five moves yield three image pairs, and move 9 draws
 the fixed-point axis. See the [secant construction](docs/SECANT.md) for elementary steps,
 proofs, exact certificates, and the coverage gap.
 
-The center-chord construction starts with OA and draws the fixed-point axis at move 11.
-It covers generic inputs throughout D₂. See its [construction and proof](docs/CONSTRUCTION.md).
+The other method starts with line OA through the circle's center O and the given point A,
+and draws the fixed-point axis at move 11. It works in the general case whether AB crosses,
+is tangent to, or misses the circle. See its [construction and proof](docs/CONSTRUCTION.md).
 
-Both routes draw only lines and use the given circle for intersections. Each target has a
-separately trimmed program. In the table, `gen` is relative to the input domain named in each
-column and requires relatively open, dense, full-measure coverage. Full-domain `rob` bounds
-and intermediate-degeneracy repairs remain open.
+Both methods draw only lines and use the given circle for intersections. These move counts
+apply to the general case. Special cases such as parallel auxiliary lines or coincident
+auxiliary points still need further work to cover every input with two nondegenerate solutions.
 
 ### Free inputs and the two-solution domain
 
@@ -131,7 +131,7 @@ python3 experiments/replay_secant_seed.py
 python3 -m unittest discover -v
 ```
 
-The secant replay reports a 9 E axis and 11, 12, 13, and 15 E for the four targets.
+The secant replay reports a 9 E axis, with one complete triangle at 12 E and both at 15 E.
 The standard-library environment runs twelve checks. The Manim environment runs three additional
 checks for viewports, line clipping, and numerical-search calibration. Regenerate the animation
 geometry with the following command.
