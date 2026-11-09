@@ -2,11 +2,11 @@
 
 **简体中文** · [English](README.en.md)
 
-**AB 割圆的一般位置下，只画 12 条直线完成一个目标三角形，15 条直线完成两个目标三角形。**
+**对二解域内 AB 严格割圆的一般位置输入，12 条直线完成一个目标三角形，15 条直线完成两个。**
 
 给定圆、圆心和三个点，研究 Cramer–Castillon 问题：作圆内接三角形，使三边所在直线
 分别经过给定点。本项目提供逐步动画、逐笔构造、一般参数证明、独立精确核验、解数分类及有界搜索。
-**整个二解域的一般位置上界为 14、17 E，严格割线子域为 12、15 E。全局最小性与完整域鲁棒上界待研究。**
+**全局最小性与完整域鲁棒上界待研究。**
 
 [观看 15 E 双解动画](animations/castillon/media/CastillonBoth_15E_4k60.mp4) ·
 [12 E 单解动画](animations/castillon/media/CastillonOne_12E_4k60.mp4) ·
@@ -36,34 +36,25 @@
 
 ## 当前已验证上界
 
-| 目标 | 直线 | 新增圆 | 一般位置 `gen` | 完整域 `rob` |
-|---|---:|---:|---:|---|
-| 一个解的三个顶点 `one_vertices` | 13 | 0 | **13 E** | 待研究 |
-| 一个完整三角形 `one_edges` | 14 | 0 | **14 E** | 待研究 |
-| 两个解的全部顶点 `all_vertices` | 15 | 0 | **15 E** | 待研究 |
-| 两个完整三角形 `all_edges` | 17 | 0 | **17 E** | 待研究 |
+在二解域 D₂ 内，按输入覆盖范围分别记录两条构造的一般位置上界。
 
-公共前缀在第 11 E 画出不动点轴，得到两个解各自的起始顶点。
-新增圆为零表示不额外画圆；免费输入圆仍参与求交。每行对应独立裁剪程序，
-15 E 顶点程序的分数不是 17 E 完整程序中的首次命中时刻。
+| 目标 | AB 严格割圆子域 `gen`，动画所用构造 | 整个 D₂ 的 `gen`，圆心弦构造 |
+|---|---:|---:|
+| 一个解的三个顶点 `one_vertices` | **11 E** | 13 E |
+| 一个完整三角形 `one_edges` | **12 E** | 14 E |
+| 两个解的全部顶点 `all_vertices` | **13 E** | 15 E |
+| 两个完整三角形 `all_edges` | **15 E** | 17 E |
 
-`gen` 要求覆盖研究域中相对开稠密、满测度的子域；`rob` 要求覆盖整个研究域，
-按最坏实际成本计费。当前尚未补齐辅助点重合、定义线平行等中间退化。
+动画所用的割线构造要求 AB 与 Γ 有两个不同实交点，覆盖三个输入点均在圆内的二解一般位置。
+首笔 AB 使两个投影对合交换同一对圆交点，结合逆向投影，五笔取得三组对应点，
+第 9 E 画出不动点轴。逐笔步骤、证明、精确证书与覆盖缺口见 [割线构造](docs/SECANT.md)。
 
-### AB 割圆时的受限域改进
+圆心弦构造从 OA 起步，第 11 E 画出不动点轴，适用于整个 D₂ 的一般位置。
+其逐笔程序与证明见 [圆心弦构造](docs/CONSTRUCTION.md)。
 
-当 AB 与 Γ 有两个不同实交点时，另一条一般位置构造取得以下上界。
-
-| 目标 | 受限域上界 |
-|---|---:|
-| 一个解的三个顶点 | **11 E** |
-| 一个完整三角形 | **12 E** |
-| 两个解的全部顶点 | **13 E** |
-| 两个完整三角形 | **15 E** |
-
-这覆盖三个输入点均在圆内的二解一般位置。首笔 AB 使两个投影对合交换同一对圆交点，
-结合逆向投影，五笔取得三组对应点，第 9 E 画出不动点轴。
-六参数恒等式、20 份独立精确重放及覆盖缺口的例子见 [割线构造](docs/SECANT.md)。
+两条路线均只画直线，给定圆参与求交。各目标分别裁剪程序。
+表中的 `gen` 相对于各列注明的输入域，要求适用范围相对开、稠密、满测度。
+覆盖完整输入域的 `rob` 上界及中间退化修复待研究。
 
 ### 免费输入与二解域
 
@@ -104,17 +95,17 @@ $$
 
 几何主体沿用经典圆上射影对应的不动点轴路线，参考 Maurice Starck 的
 [*Castillon’s problem*](https://www.polyhedra-world.nc/stuff/Castillon.pdf)，2002。
-本项目选择确定性圆心弦，复用三个投影点对的已有弦，记录 11 E 公共前缀与
-13/14/15/17 E 程序，并提供精确重放、一般参数核验和搜索台账。
+本项目给出割线起步与圆心弦起步的逐笔程序，复用投影链和已有弦，
+并提供精确重放、一般参数核验、输入域分类和有界搜索台账。
 不主张经典路线或当前步数的文献首创性，详见 [LITERATURE](docs/LITERATURE.md)。
 
 ## 精确验证
 
 | 核验 | 结果或作用 | 记录 |
 |---|---|---|
-| 标准库精确重放 | 四个夹具、五种输出程序，0 次重复绘制 | [构造证书](experiments/results/baseline.json) |
-| 独立 Sage 重放 | 20 个程序的交点闭包、实际 E、首次命中一致；4 个错误对照被拒绝 | [验证报告](experiments/results/sage-verification.json) |
-| 一般参数恒等式 | 五参数的对应点对、不动点轴及非恒等退化检查通过 | [验证脚本](experiments/verify_sage.py) |
+| 割线构造精确重放 | 四个夹具、五种输出程序，0 次重复绘制 | [割线构造证书](experiments/results/secant-seed.json) |
+| 割线构造独立 Sage 核验 | 六参数恒等式、20 个程序的交点闭包、计分及首次命中一致，4 个错误对照被拒绝 | [割线验证报告](experiments/results/secant-seed-verification.json) |
+| 圆心弦构造独立 Sage 核验 | 五参数恒等式及 20 个程序的精确重放通过 | [圆心弦验证报告](experiments/results/sage-verification.json) |
 | 解数分类 | 六参数恒等式、21 个精确例子与 4 个基线输入域检查通过 | [分类报告](experiments/results/classification-verification.json) |
 
 构造器使用 Fraction 与实二次扩域；独立 Sage 验证器不导入该几何实现，不信任声明分数，
@@ -126,9 +117,11 @@ $$
 Python 3.10+ 标准库即可运行几何、搜索和动画数据回归检查：
 
 ```sh
+python3 experiments/replay_secant_seed.py
 python3 -m unittest discover -v
 ```
 
+割线重放报告轴入口为 9 E，四个目标依次为 11、12、13、15 E。
 标准库环境运行 12 项检查，Manim 环境另运行镜头、直线裁剪及数值搜索校准共 3 项检查。
 重新导出动画几何数据可执行以下命令，4K60 渲染步骤见 [动画说明](animations/castillon/README.md)。
 
@@ -136,32 +129,34 @@ python3 -m unittest discover -v
 python3 animations/castillon/export_geometry.py
 ```
 
-独立验证使用 SageMath 10.7，固定 Docker 镜像，断网运行并只读挂载项目：
+割线构造的独立验证使用 SageMath 10.7，固定 Docker 镜像，断网运行并只读挂载项目。
 
 ```sh
 docker run --rm --network none \
   -v "$PWD:/workspace:ro" -w /workspace \
   -e PYTHONDONTWRITEBYTECODE=1 \
   sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
-  sage -python experiments/verify_sage.py
+  sage -python experiments/verify_secant_seed_sage.py
 ```
 
-已有镜像时无需网络或常驻容器。分类核验、证书再生成、搜索命令和预期输出见
+已有镜像时无需网络或常驻容器。分类核验、圆心弦验证、证书再生成、搜索命令和预期输出见
 [完整复现说明](docs/REPRODUCING.md)。
 
 ## 当前研究方向
 
-优先突破完整单解的 14 E，再研究双解共享、混合圆前缀、直接目标命中和完整域退化修复。
-已有 9,878 个受限前缀的筛查不构成全局下界。
-研究优先级与 Manim 展示约定见 [ROADMAP](docs/ROADMAP.md)，已完成范围见 [SEARCH](docs/SEARCH.md)。
+继续研究割线构造的 9 E 轴入口能否降步，扩大 12/15 E 的输入覆盖范围，
+并探索混合圆、直接命中目标边、双解共享和中间退化修复。
+已筛查 625 个 AB 起步弦线前缀及 98,653 个混合状态，五个数值初筛结果均被独立精确核验排除。
+这些有限搜索的范围与未覆盖候选见 [SEARCH](docs/SEARCH.md)。
+研究优先级与展示约定见 [ROADMAP](docs/ROADMAP.md)。
 
 ## 文档与代码入口
 
 | 内容 | 入口 |
 |---|---|
 | 输入、目标与声明等级 | [DESIGN](docs/DESIGN.md) |
-| 逐笔构造与证明 | [CONSTRUCTION](docs/CONSTRUCTION.md) |
-| AB 割圆子域的 12/15 E 构造 | [SECANT](docs/SECANT.md) |
+| 动画所用割线构造、逐笔步骤与证明 | [SECANT](docs/SECANT.md) |
+| 二解域一般位置的圆心弦构造 | [CONSTRUCTION](docs/CONSTRUCTION.md) |
 | 存在性、解数与退化 | [CLASSIFICATION](docs/CLASSIFICATION.md) |
 | 完整复现命令 | [REPRODUCING](docs/REPRODUCING.md) |
 | 已有搜索范围 | [SEARCH](docs/SEARCH.md) |

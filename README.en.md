@@ -2,12 +2,12 @@
 
 [简体中文](README.md) · **English**
 
-**With a proper AB secant in generic position, draw one solution triangle with 12 lines, or both with 15 lines.**
+**For generic two-solution inputs with a proper AB secant, draw one triangle with 12 lines, or both with 15 lines.**
 
 Given a circle, its center, and three points, construct an inscribed triangle whose side
 lines respectively pass through those points. This project provides step-by-step animations, elementary traces,
 general-parameter proofs, independent exact verification, solution classification, and bounded searches.
-**Generic upper bounds are 14 and 17 E over the full two-solution domain, and 12 and 15 E on the proper-secant subdomain. Global minimality and full-domain robust bounds remain open.**
+**Global minimality and full-domain robust bounds remain open.**
 
 [Watch the 15 E two-solution animation](animations/castillon/media/CastillonBoth_15E_4k60.mp4) ·
 [12 E single-solution animation](animations/castillon/media/CastillonOne_12E_4k60.mp4) ·
@@ -33,45 +33,36 @@ Geometry is exported from exact replay and checked against the committed certifi
 the `inside` fixture, with all three given points inside the circle. The first move draws AB.
 Forward and inverse projections produce the fixed-point axis at move 9. Each video starts from
 the free inputs, sharing the first 12 moves. All vertices appear at move 14 in the two-solution
-video. The independent 13 E
-vertex-only program omits the final side of the first triangle.
+video. The independent 13 E vertex-only program omits the final side of the first triangle.
 
 See the [animation guide](animations/castillon/README.md) for geometry export, viewport tests,
 and rendering commands. Detailed mathematical documents are currently in Chinese.
 
 ## Current verified upper bounds
 
-| Target | Lines | New circles | Generic `gen` | Full-domain `rob` |
-|---|---:|---:|---:|---|
-| Three vertices of one solution `one_vertices` | 13 | 0 | **13 E** | Not established |
-| One complete triangle `one_edges` | 14 | 0 | **14 E** | Not established |
-| All vertices of both solutions `all_vertices` | 15 | 0 | **15 E** | Not established |
-| Both complete triangles `all_edges` | 17 | 0 | **17 E** | Not established |
+Within the two-solution domain D₂, the two constructions have different input coverage.
 
-The common prefix draws the fixed-point axis at move 11, obtaining one starting vertex
-of each solution. The given circle remains available for intersections. Each row is a
-separately trimmed program; 15 E is not the first-hit time of the 17 E full program.
+| Target | Proper AB-secant subdomain `gen`, animated construction | Full D₂ `gen`, center-chord construction |
+|---|---:|---:|
+| Three vertices of one solution `one_vertices` | **11 E** | 13 E |
+| One complete triangle `one_edges` | **12 E** | 14 E |
+| All vertices of both solutions `all_vertices` | **13 E** | 15 E |
+| Both complete triangles `all_edges` | **15 E** | 17 E |
 
-`gen` requires a relatively open, dense, full-measure subset of the study domain D₂.
-`rob` covers the entire domain with worst-case actual drawing cost. Exceptional auxiliary
-coincidences and parallel defining lines have not yet all been repaired.
-
-### Restricted improvement with a proper AB secant
-
-When AB intersects Γ in two distinct real points, another generic construction gives these bounds.
-
-| Target | Restricted upper bound |
-|---|---:|
-| Three vertices of one solution | **11 E** |
-| One complete triangle | **12 E** |
-| All vertices of both solutions | **13 E** |
-| Both complete triangles | **15 E** |
-
-This includes generic two-solution inputs with all three given points inside the circle.
+The animated secant construction requires two distinct real intersections of AB with Γ.
+It includes generic two-solution inputs with all three given points inside the circle.
 Starting with AB makes two projection involutions exchange the same pair of circle points.
-Using the inverse map, five moves yield three image pairs, and move 9 draws the fixed-point axis.
-See the [secant construction](docs/SECANT.md) for six-parameter identities, 20 independent exact
-replays, and a two-solution input outside the secant domain.
+Using forward and inverse projections, five moves yield three image pairs, and move 9 draws
+the fixed-point axis. See the [secant construction](docs/SECANT.md) for elementary steps,
+proofs, exact certificates, and the coverage gap.
+
+The center-chord construction starts with OA and draws the fixed-point axis at move 11.
+It covers generic inputs throughout D₂. See its [construction and proof](docs/CONSTRUCTION.md).
+
+Both routes draw only lines and use the given circle for intersections. Each target has a
+separately trimmed program. In the table, `gen` is relative to the input domain named in each
+column and requires relatively open, dense, full-measure coverage. Full-domain `rob` bounds
+and intermediate-degeneracy repairs remain open.
 
 ### Free inputs and the two-solution domain
 
@@ -112,17 +103,18 @@ The elementary semantics follow Euclid-Min's fixed-version [metrics](https://git
 
 The geometric route uses the classical fixed-point axis of a circle projectivity, described
 in Maurice Starck's [*Castillon’s problem*](https://www.polyhedra-world.nc/stuff/Castillon.pdf), 2002.
-This project supplies a deterministic center chord, shared projection chords, the 11 E prefix,
-13/14/15/17 E traces, exact replays, general identities, and search records.
+This project supplies elementary programs starting from a proper secant or a center chord,
+shared projection chains and chords, exact replays, general identities, input classification,
+and bounded-search records.
 It claims no historical priority for the method or counts. See [LITERATURE](docs/LITERATURE.md).
 
 ## Exact verification
 
 | Check | Result or purpose | Record |
 |---|---|---|
-| Standard-library replay | Four fixtures, five programs, no duplicate draws | [Certificates](experiments/results/baseline.json) |
-| Independent Sage replay | 20 programs, closure, recounts, first-hit times; four invalid controls rejected | [Report](experiments/results/sage-verification.json) |
-| General identities | Five-parameter point pairs, fixed-point axis, and generic nondegeneracy | [Script](experiments/verify_sage.py) |
+| Exact secant replay | Four fixtures, five programs, no duplicate draws | [Secant certificates](experiments/results/secant-seed.json) |
+| Independent Sage verification of the secant route | Six-parameter identities, 20 programs with closure, recounts and first-hit checks, four invalid controls rejected | [Secant report](experiments/results/secant-seed-verification.json) |
+| Independent Sage verification of the center-chord route | Five-parameter identities and 20 exact program replays | [Center-chord report](experiments/results/sage-verification.json) |
 | Classification | Six-parameter identities, 21 exact examples, four baseline-domain checks | [Report](experiments/results/classification-verification.json) |
 
 The constructor uses Fraction and a real quadratic field. The independent Sage verifier
@@ -135,9 +127,11 @@ and minimality are separate evidence. Exact decisions use no tolerance; python -
 Python 3.10+ standard library runs the geometry, search, and animation-data regression checks:
 
 ```sh
+python3 experiments/replay_secant_seed.py
 python3 -m unittest discover -v
 ```
 
+The secant replay reports a 9 E axis and 11, 12, 13, and 15 E for the four targets.
 The standard-library environment runs twelve checks. The Manim environment runs three additional
 checks for viewports, line clipping, and numerical-search calibration. Regenerate the animation
 geometry with the following command.
@@ -147,33 +141,37 @@ The [animation guide](animations/castillon/README.md) includes 4K60 rendering in
 python3 animations/castillon/export_geometry.py
 ```
 
-Independent SageMath 10.7 verification uses a pinned image, no network, and a read-only mount:
+Independent SageMath 10.7 verification of the secant construction uses a pinned image,
+no network, and a read-only mount.
 
 ```sh
 docker run --rm --network none \
   -v "$PWD:/workspace:ro" -w /workspace \
   -e PYTHONDONTWRITEBYTECODE=1 \
   sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
-  sage -python experiments/verify_sage.py
+  sage -python experiments/verify_secant_seed_sage.py
 ```
 
 With the image cached, neither network access nor a persistent container is needed.
-See [complete reproduction instructions](docs/REPRODUCING.md) for classification, certificate
-regeneration, bounded searches, and expected outputs.
+See [complete reproduction instructions](docs/REPRODUCING.md) for classification, center-chord
+verification, certificate regeneration, bounded searches, and expected outputs.
 
 ## Current research directions
 
-First seek a complete single triangle below 14 E, then improve shared two-solution programs,
-mixed-circle prefixes, direct target hits, and robust repairs. Screening 9,878 restricted
-prefixes is not a global lower bound. See [ROADMAP](docs/ROADMAP.md) and [SEARCH](docs/SEARCH.md).
+Investigate whether the secant route's 9 E axis can be shortened, extend its 12/15 E input
+coverage, and explore mixed circles, direct target edges, shared two-solution programs,
+and intermediate-degeneracy repairs. Screening 625 AB-seed chord prefixes and 98,653 mixed
+states produced five numerical hits, all rejected by independent exact verification.
+See [SEARCH](docs/SEARCH.md) for the finite search scope and uncovered candidates.
+Research priorities and presentation conventions are in [ROADMAP](docs/ROADMAP.md).
 
 ## Documentation and code
 
 | Content | Entry |
 |---|---|
 | Inputs, targets, and claim levels | [DESIGN](docs/DESIGN.md) |
-| Elementary trace and proof | [CONSTRUCTION](docs/CONSTRUCTION.md) |
-| Restricted 12/15 E construction with an AB secant | [SECANT](docs/SECANT.md) |
+| Animated secant construction, elementary steps, and proof | [SECANT](docs/SECANT.md) |
+| Center-chord construction for generic inputs throughout D₂ | [CONSTRUCTION](docs/CONSTRUCTION.md) |
 | Existence, counts, and degeneracy | [CLASSIFICATION](docs/CLASSIFICATION.md) |
 | Full reproduction commands | [REPRODUCING](docs/REPRODUCING.md) |
 | Bounded searches already performed | [SEARCH](docs/SEARCH.md) |
