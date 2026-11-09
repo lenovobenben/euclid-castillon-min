@@ -4,140 +4,141 @@
 
 **只画 14 条直线，完成一个目标三角形；只画 17 条直线，完成两个目标三角形。**
 
-研究 Cramer–Castillon 问题的 E 步优化：给定一个带圆心的圆和三个点，
-构造内接三角形，使三边所在直线分别经过三个给定点。
-
-提供逐笔构造、一般参数证明、独立精确核验、解数分类与有界搜索记录。
+给定圆、圆心和三个点，研究 Cramer–Castillon 问题：作圆内接三角形，使三边所在直线
+分别经过给定点。本项目提供逐笔构造、一般参数证明、独立精确核验、解数分类及有界搜索。
 **14、17 E 是一般位置上的已验证上界，尚未证明全局最小，完整域鲁棒上界待研究。**
 
-[逐笔构造与证明](docs/CONSTRUCTION.md) · [输入条件与解数](docs/CLASSIFICATION.md) ·
-[独立核验](experiments/results/sage-verification.json)
+[构造与证明](docs/CONSTRUCTION.md) · [输入与解数](docs/CLASSIFICATION.md) ·
+[构造证书](experiments/results/baseline.json) · [验证报告](experiments/results/sage-verification.json)
 
-Manim 动画将在后续补充。
+Manim 动画后续补充。当前已有结果不依赖动画作数学判定。
 
-## E 步计数
+## 当前已验证上界
 
-基础计数沿用 [Euclid-Min](https://github.com/lenovobenben/euclid-min) 与
-[Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min)：
+| 目标 | 直线 | 新增圆 | 一般位置 `gen` | 完整域 `rob` |
+|---|---:|---:|---:|---|
+| 一个解的三个顶点 `one_vertices` | 13 | 0 | **13 E** | 待研究 |
+| 一个完整三角形 `one_edges` | 14 | 0 | **14 E** | 待研究 |
+| 两个解的全部顶点 `all_vertices` | 15 | 0 | **15 E** | 待研究 |
+| 两个完整三角形 `all_edges` | 17 | 0 | **17 E** | 待研究 |
 
-- 两个已有不同点确定一条直线，1 E。
-- 一个已有点为圆心、经过另一个已有点画圆，1 E；使用塌圆规。
-- 已有对象的确定有限实交点及命名，0 E。
-- 禁止任取点；三点作圆、中垂线、平行线等宏必须展开。
-- 实际重复绘制仍然收费。初始对象和目标不同，分数不能直接比较。
+公共前缀在第 11 E 画出不动点轴，得到两个解各自的起始顶点。
+新增圆为零表示不额外画圆；免费输入圆仍参与求交。每行对应独立裁剪程序，
+15 E 顶点程序的分数不是 17 E 完整程序中的首次命中时刻。
 
-## 当前上界
+`gen` 要求覆盖研究域中相对开稠密、满测度的子域；`rob` 要求覆盖整个研究域，
+按最坏实际成本计费。当前尚未补齐辅助点重合、定义线平行等中间退化。
 
-免费输入：圆 Γ、其圆心 O，以及互异、不共线、不在 Γ 上的 A、B、C。
-不免费提供圆周点、半径端点、坐标轴或任何直线。
+### 免费输入与二解域
 
-首先研究恰有两个非退化解的输入域 D₂；边的延长线可以经过给定点。
-设 S 为 ABC 面积，p_P=OP²−R²，令 K=4R²S²+p_Ap_Bp_C。
-令 e 为三个“给定点的切点恰好落在另外两点连线上”的个数之和，
-则 **D₂ 的充要条件为 K>0 且 e=0**。
-无解、唯一解、两解、无穷多解的完整充要条件、退化检查和证明见
-[输入条件与解数分类](docs/CLASSIFICATION.md)。
-当前程序覆盖其中的一般位置子域，尚未补齐全部中间退化情形。
+免费输入为完整圆 Γ、圆心 O，以及互异、不共线、不在 Γ 上的 A、B、C。
+不免费提供圆周点、半径端点、坐标轴或直线。允许边的延长线经过给定点。
 
-| 目标 | 直线 | 新增圆 | E |
-|---|---:|---:|---:|
-| 得到两个解各自的起始顶点 | 11 | 0 | 11 |
-| 得到任意一个解的三个顶点 | 13 | 0 | 13 |
-| 实际画出任意一个完整三角形 | 14 | 0 | 14 |
-| 得到两个解的全部顶点 | 15 | 0 | 15 |
-| 实际画出两个完整三角形 | 17 | 0 | 17 |
+设 R 为圆半径、S 为 ABC 面积，p_P=OP²−R²，定义
 
-这些是不同目标程序的已验证上界，**不是全局最少步数**。
-“圆为零”指零个新增圆；免费输入圆始终参与求交。
-`gen` 覆盖二解域中相对开稠密、满测度的一般位置子域；当前没有 `rob` 完整域成绩。
-输入、目标和声明等级见 [DESIGN](docs/DESIGN.md)。
+$$
+K=4R^2S^2+p_Ap_Bp_C.
+$$
 
-## 构造与验证
+令 e 为各给定点的切点中位于另外两点连线上的个数总和。
+**恰有两个非退化解的充要条件为 K>0 且 e=0**，构成研究域 D₂。
+无解、唯一解、两解和无穷多解的完整判定见 [CLASSIFICATION](docs/CLASSIFICATION.md)。
+本题的输入判定与某份辅助作图是否适用是不同的问题。
 
-构造使用圆上射影变换的不动点轴，选择确定性起始弦，并在三个投影点对之间共享已有弦。
-所有笔画均展开为过两个已有点的直线。
+## E 步：唯一采用的计数法
 
-- [逐笔构造、证明和适用条件](docs/CONSTRUCTION.md)
-- [完整输入条件、存在性、解数与退化分类](docs/CLASSIFICATION.md)
-- [研究配置](profiles/castillon-d2-e-generic-v1.json)
-- [标准库精确重放](experiments/replay_baseline.py)
-- [独立 Sage 验证器与一般参数恒等式](experiments/verify_sage.py)
-- [标准库证书](experiments/results/baseline.json)
-- [Sage 验证报告](experiments/results/sage-verification.json)
-- [解数分类的 Sage 验证报告](experiments/results/classification-verification.json)
-- [已检查搜索范围及限制](docs/SEARCH.md)
+| 操作 | 成本 |
+|---|---:|
+| 经过两个已有不同点画一条完整直线 | 1 E |
+| 以一个已有点为圆心、经过另一个已有点画圆 | 1 E |
+| 获得或命名已有对象的确定有限实交点 | 0 E |
+| 给定圆、圆心与三个输入点 | 0 E |
+| 再次执行一次相同的画线或画圆动作 | 仍计 1 E |
 
-四个有理数夹具覆盖全外点、混合内外点、全内点的正常二解构型；
-构造只需要有理运算和最后一个实二次扩域。标准库重放完全不用浮点判定。
-独立 Sage 验证器不导入标准库几何实现，重新计算交点、自动交点闭包、
-实际步数、重复绘制、目标和首次命中时刻。
+采用无刻度直尺与**塌圆规**，不允许任取辅助点、使用无穷远点或免费异地搬运距离。
+每画一个新图元，它与全部已有不同对象的有限实交点自动进入点集。
+中点、垂线、平行线、三点作圆和反演等宏须展开计费；分支判断新增的图元、
+失败尝试和实际重复绘制同样计费。只引用已有对象不增加 E。
 
-Sage 另外在五个独立参数的多项式环中验证三个对应点对、两个轴上辅助点、
-最终轴和复合矩阵的一致性及非恒等退化，提供一般位置正确性的代数依据。
-有限夹具通过与一般参数恒等式证明是分别记录的证据。
+基础语义沿用 Euclid-Min 固定版本的 [计分规范](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/METRICS.md)与[正式模型](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/FORMAL_MODEL.md)。
+本题的免费输入、目标及覆盖范围以 [DESIGN](docs/DESIGN.md) 为准。
+不同题目的分数不能仅凭计数法相同就直接比较。
+
+## 来源与项目贡献
+
+几何主体沿用经典圆上射影对应的不动点轴路线，参考 Maurice Starck 的
+[*Castillon’s problem*](https://www.polyhedra-world.nc/stuff/Castillon.pdf)，2002。
+本项目选择确定性圆心弦，复用三个投影点对的已有弦，记录 11 E 公共前缀与
+13/14/15/17 E 程序，并提供精确重放、一般参数核验和搜索台账。
+不主张经典路线或当前步数的文献首创性，详见 [LITERATURE](docs/LITERATURE.md)。
+
+## 精确验证
+
+| 核验 | 结果或作用 | 记录 |
+|---|---|---|
+| 标准库精确重放 | 四个夹具、五种输出程序，0 次重复绘制 | [构造证书](experiments/results/baseline.json) |
+| 独立 Sage 重放 | 20 个程序的交点闭包、实际 E、首次命中一致；4 个错误对照被拒绝 | [验证报告](experiments/results/sage-verification.json) |
+| 一般参数恒等式 | 五参数的对应点对、不动点轴及非恒等退化检查通过 | [验证脚本](experiments/verify_sage.py) |
+| 解数分类 | 六参数恒等式、21 个精确例子与 4 个基线输入域检查通过 | [分类报告](experiments/results/classification-verification.json) |
+
+构造器使用 Fraction 与实二次扩域；独立 Sage 验证器不导入该几何实现，不信任声明分数，
+坐标声明仅用于选择独立求出的交点。有限样本、一般参数证明、覆盖证明与最小性证明分别记录。
+浮点只用于候选发现或显示；精确验证不使用容差，验证器不支持 python -O。
 
 ## 复现
 
-标准库重放和有界搜索：
+Python 3.10+ 标准库即可运行六项回归检查：
 
 ```sh
-python3 experiments/replay_baseline.py --output experiments/results/baseline.json
 python3 -m unittest discover -v
-python3 experiments/search_prefix_suffix.py
-python3 experiments/search_one_move_finish.py
-python3 experiments/search_chord_trees.py
 ```
 
-独立验证使用 SageMath 10.7。先取得对应 Docker 镜像；验证本身断网运行，项目只读挂载：
+独立验证使用 SageMath 10.7，固定 Docker 镜像，断网运行并只读挂载项目：
 
 ```sh
 docker run --rm --network none \
   -v "$PWD:/workspace:ro" -w /workspace \
   -e PYTHONDONTWRITEBYTECODE=1 \
   sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
-  sage -python experiments/verify_sage.py > experiments/results/sage-verification.json
+  sage -python experiments/verify_sage.py
 ```
 
-判定公式的一般恒等式和 21 个精确分类实例另运行
-`experiments/classify_sage.py`，输出保存到 `experiments/results/classification-verification.json`，完整命令见 [分类文档](docs/CLASSIFICATION.md#8-可复核证据与复现)。
+已有镜像时无需网络或常驻容器。分类核验、证书再生成、搜索命令和预期输出见
+[完整复现说明](docs/REPRODUCING.md)。
 
-## 下一步研究范围
+## 当前研究方向
 
-1. 使用已有线线交点作为新弦的定义点，扩大当前 A/B/C 弦线树前缀。
-2. 比较混合直线与基础圆的短程序，目标是优先突破 14 E 单解完整三角形。
-3. 比较不先画不动点轴、直接命中任意目标顶点的路线。
-4. 建立中间退化分类和带最坏成本的修复分支，另列 `rob` 上界。
-5. 单解、双解共享构造和下界分开研究；不将有界未命中写成最小性证明。
-
-优先级、搜索边界和未来动画安排见 [ROADMAP](docs/ROADMAP.md)。
-
-## 来源
-
-圆上对应的不动点及交叉弦交点轴路线见 Maurice Starck，
-[*Castillon’s problem*](https://www.polyhedra-world.nc/stuff/Castillon.pdf)，2002。
-本项目的工作是冻结本题 E 配置、选择确定性起始弦、复用已有弦、展开逐笔程序，
-以及建立精确重放、一般参数验证与有界搜索台账。
-目前不主张经典构造路线或当前步数的文献首创性。
-
-详细来源及计数可比性见 [LITERATURE](docs/LITERATURE.md)。
+优先突破完整单解的 14 E，再研究双解共享、混合圆前缀、直接目标命中和完整域退化修复。
+已有 9,878 个受限前缀的筛查不构成全局下界。
+研究优先级与未来 Manim 安排见 [ROADMAP](docs/ROADMAP.md)，已完成范围见 [SEARCH](docs/SEARCH.md)。
 
 ## 文档与代码入口
 
 | 内容 | 入口 |
 |---|---|
-| 输入、目标、计分和声明等级 | [DESIGN](docs/DESIGN.md) |
-| 十七笔构造与证明 | [CONSTRUCTION](docs/CONSTRUCTION.md) |
-| 存在性与解数判定 | [CLASSIFICATION](docs/CLASSIFICATION.md) |
-| 研究优先级与动画计划 | [ROADMAP](docs/ROADMAP.md) |
+| 输入、目标与声明等级 | [DESIGN](docs/DESIGN.md) |
+| 逐笔构造与证明 | [CONSTRUCTION](docs/CONSTRUCTION.md) |
+| 存在性、解数与退化 | [CLASSIFICATION](docs/CLASSIFICATION.md) |
+| 完整复现命令 | [REPRODUCING](docs/REPRODUCING.md) |
 | 已有搜索范围 | [SEARCH](docs/SEARCH.md) |
-| 出处与计数可比性 | [LITERATURE](docs/LITERATURE.md) |
-| 精确重放、符号核验与搜索 | [experiments](experiments/) |
-| 构造证书、报告与搜索数据 | [experiments/results](experiments/results/) |
+| 研究路线与动画计划 | [ROADMAP](docs/ROADMAP.md) |
+| 来源与计数可比性 | [LITERATURE](docs/LITERATURE.md) |
+| 研究脚本 | [experiments](experiments/README.md) |
+| 证书与报告 | [experiments/results](experiments/results/README.md) |
+| 回归检查 | [tests](tests/README.md) |
+| 系列约定与四项目对照 | [SERIES](docs/SERIES.md) |
+
+**尺规作图优化系列**：
+[Euclid-Min](https://github.com/lenovobenben/euclid-min) ·
+[Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min) ·
+[Euclid-Equal-Angle-Min](https://github.com/lenovobenben/euclid-equal-angle-min) ·
+[Euclid-Castillon-Min](https://github.com/lenovobenben/euclid-castillon-min)。
+
 
 ## 许可与引用
 
-代码、测试和配置采用 [Apache 2.0](LICENSE)；数学文档、构造记录和研究数据采用
-[CC BY 4.0](LICENSE-CONTENT)。第三方材料保持其原有权利，详见 [许可范围](LICENSE-SCOPE.md)。
-
-引用时请注明 **lenovobenben，Euclid-Castillon-Min**、[仓库地址](https://github.com/lenovobenben/euclid-castillon-min)
-及所用提交或版本；转载或改编非软件内容时按 CC BY 4.0 署名并注明修改。
+代码、测试和配置采用 [Apache 2.0](LICENSE)；数学文档、构造记录、研究数据及
+项目引用元数据采用 [CC BY 4.0](LICENSE-CONTENT)。第三方材料保持其原有权利，
+详见[许可范围](LICENSE-SCOPE.md)。引用时请使用 [CITATION.cff](CITATION.cff)，
+注明 **lenovobenben，Euclid-Castillon-Min**、[仓库地址](https://github.com/lenovobenben/euclid-castillon-min)
+及所用提交或版本；改编非软件内容时注明修改。

@@ -2,149 +2,148 @@
 
 [简体中文](README.md) · **English**
 
-**Draw one solution triangle using 14 lines; draw both solution triangles using 17 lines. No additional circles are needed.**
+**Draw one solution triangle with 14 lines, or both solution triangles with 17 lines. No additional circles are drawn.**
 
-Given a circle, its center, and three points, this project studies E-move optimization for
-the Cramer–Castillon problem: inscribe a triangle whose side lines respectively pass
-through the given points. It provides elementary traces, general-parameter proofs,
-independent exact verification, solution-count classification, and bounded searches.
-**14 and 17 E are verified generic upper bounds, not proved global minima.
-A full-domain robust upper bound has not yet been established.**
+Given a circle, its center, and three points, construct an inscribed triangle whose side
+lines respectively pass through those points. This project provides elementary traces,
+general-parameter proofs, independent exact verification, solution classification, and bounded searches.
+**14 and 17 E are verified generic upper bounds. Global minimality and full-domain robust bounds remain open.**
 
 [Construction and proof](docs/CONSTRUCTION.md) · [Input classification](docs/CLASSIFICATION.md) ·
-[Certificates](experiments/results/baseline.json) · [Sage verification](experiments/results/sage-verification.json)
+[Certificates](experiments/results/baseline.json) · [Verification](experiments/results/sage-verification.json)
 
-Manim animations will be added later. Detailed research documents are currently in Chinese.
+Manim animations will be added later. Detailed mathematical documents are currently in Chinese.
 
 ## Current verified upper bounds
 
-| Target | Lines | New circles | Generic score |
-|---|---:|---:|---:|
-| Three vertices of either solution `one_vertices` | 13 | 0 | **13 E** |
-| One complete triangle `one_edges` | 14 | 0 | **14 E** |
-| All vertices of both solutions `all_vertices` | 15 | 0 | **15 E** |
-| Both complete triangles `all_edges` | 17 | 0 | **17 E** |
+| Target | Lines | New circles | Generic `gen` | Full-domain `rob` |
+|---|---:|---:|---:|---|
+| Three vertices of one solution `one_vertices` | 13 | 0 | **13 E** | Not established |
+| One complete triangle `one_edges` | 14 | 0 | **14 E** | Not established |
+| All vertices of both solutions `all_vertices` | 15 | 0 | **15 E** | Not established |
+| Both complete triangles `all_edges` | 17 | 0 | **17 E** | Not established |
 
-The shared prefix draws the fixed-point axis at move 11, obtaining one starting vertex
-of each solution. The free input circle remains available for intersections.
-Each row is a separately trimmed program. The 15 E vertex score is not the first-hit time
-of the 17 E complete-triangle program. No full-domain `rob` score is claimed.
+The common prefix draws the fixed-point axis at move 11, obtaining one starting vertex
+of each solution. The given circle remains available for intersections. Each row is a
+separately trimmed program; 15 E is not the first-hit time of the 17 E full program.
 
-Generic coverage is relatively open, dense, and full measure within the two-solution domain.
-Exceptional auxiliary coincidences and parallel defining lines still require repairs.
-See [DESIGN](docs/DESIGN.md) and [CONSTRUCTION](docs/CONSTRUCTION.md).
+`gen` requires a relatively open, dense, full-measure subset of the study domain D₂.
+`rob` covers the entire domain with worst-case actual drawing cost. Exceptional auxiliary
+coincidences and parallel defining lines have not yet all been repaired.
 
-## Inputs and solution counts
+### Free inputs and the two-solution domain
 
-Only Γ, its center O, and three distinct, noncollinear points A, B, C off Γ are free.
-Points may lie inside or outside the circle, including at its center. No circumference point,
-radius endpoint, axis, or line is free. Side extensions are allowed.
+Only Γ, its center O, and distinct noncollinear points A, B, C off Γ are free.
+No circumference point, radius endpoint, coordinate axis, or line is free. Side extensions are allowed.
+For radius R, area S of ABC, and point powers p_P=OP²−R², define
 
-For radius R, triangle area S, and point powers p_P=OP²−R², set
-
-```math
+$$
 K=4R^2S^2+p_Ap_Bp_C.
-```
+$$
 
 Let e count tangent contact points from each given point lying on the line through the other two.
-The two-nondegenerate-solution domain is exactly **K>0 and e=0**.
-[CLASSIFICATION](docs/CLASSIFICATION.md) gives the full zero/one/two/infinite classification,
-including self-polar configurations and degenerate closed candidates.
+The two-nondegenerate-solution domain D₂ is exactly **K>0 and e=0**.
+[CLASSIFICATION](docs/CLASSIFICATION.md) also covers zero, one, and infinitely many solutions.
+Input solvability and applicability of a particular auxiliary construction are separate questions.
 
-## E moves
+## What counts as an E move
 
 | Operation | Cost |
 |---|---:|
-| Draw a line through two existing distinct points | 1 E |
+| Draw a complete line through two existing distinct points | 1 E |
 | Draw a circle centered at an existing point through another existing point | 1 E |
 | Obtain or name a determined finite real intersection | 0 E |
 | Given circle, center, and three input points | 0 E |
-| Execute a duplicate draw | Still 1 E |
+| Execute the same draw again | Still 1 E |
 
-The tools are an unmarked straightedge and a **collapsing compass**. Arbitrary points,
-points at infinity, and direct distance transfer are forbidden. All finite real intersections
-of a new object with prior distinct objects become available automatically.
-Composite operations must be expanded into elementary draws.
+Use an unmarked straightedge and a **collapsing compass**. Arbitrary auxiliary points,
+points at infinity, and free distance transfer are forbidden. All finite real intersections
+of each new object with existing distinct objects enter the point set automatically.
+Composite operations must be expanded. Draws used for branch tests, failed attempts,
+and duplicate draws count; referencing an existing object does not add E.
 
-The elementary semantics follow Euclid-Min's fixed-version
-[metrics](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/METRICS.md)
-and [formal model](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/FORMAL_MODEL.md),
-as used in [Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min).
-Inputs and targets are specific to this [profile](profiles/castillon-d2-e-generic-v1.json).
-Scores for different problems are not directly comparable.
+The elementary semantics follow Euclid-Min's fixed-version [metrics](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/METRICS.md) and
+[formal model](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/FORMAL_MODEL.md). This project's inputs, targets, and coverage are defined in
+[DESIGN](docs/DESIGN.md). Scores for different problems are not directly comparable.
+
+## Sources and project contribution
+
+The geometric route uses the classical fixed-point axis of a circle projectivity, described
+in Maurice Starck's [*Castillon’s problem*](https://www.polyhedra-world.nc/stuff/Castillon.pdf), 2002.
+This project supplies a deterministic center chord, shared projection chords, the 11 E prefix,
+13/14/15/17 E traces, exact replays, general identities, and search records.
+It claims no historical priority for the method or counts. See [LITERATURE](docs/LITERATURE.md).
 
 ## Exact verification
 
-The standard-library constructor uses `Fraction` and a real quadratic field.
-The independent Sage verifier imports none of that geometry implementation.
-Claimed certificate coordinates may only select independently computed intersections.
+| Check | Result or purpose | Record |
+|---|---|---|
+| Standard-library replay | Four fixtures, five programs, no duplicate draws | [Certificates](experiments/results/baseline.json) |
+| Independent Sage replay | 20 programs, closure, recounts, first-hit times; four invalid controls rejected | [Report](experiments/results/sage-verification.json) |
+| General identities | Five-parameter point pairs, fixed-point axis, and generic nondegeneracy | [Script](experiments/verify_sage.py) |
+| Classification | Six-parameter identities, 21 exact examples, four baseline-domain checks | [Report](experiments/results/classification-verification.json) |
 
-| Check | Evidence |
-|---|---|
-| Exact replay | Four fixtures, five output programs, no duplicate draws: [certificates](experiments/results/baseline.json) |
-| Independent Sage replay | 20 programs, automatic intersection closure, recounted scores and first-hit times; four corrupt controls rejected: [report](experiments/results/sage-verification.json) |
-| General identities | Five independent parameters for the projection pairs and fixed-point axis: [script](experiments/verify_sage.py) |
-| Classification | Six-coordinate identities, 21 exact examples, and four baseline-domain checks: [report](experiments/results/classification-verification.json) |
+The constructor uses Fraction and a real quadratic field. The independent Sage verifier
+imports none of that geometry code and recounts the score. Claimed coordinates may only
+select independently computed intersections. Finite examples, general proofs, coverage,
+and minimality are separate evidence. Exact decisions use no tolerance; python -O is unsupported.
 
-Finite examples, symbolic identities, bounded-search misses, and global lower bounds are
-recorded separately. No floating-point tolerance is used. Python assertions must remain
-enabled; optimized `python -O` verifier runs are rejected.
+## Reproduction
 
-## Reproduce
-
-Python 3.10+ standard library:
+Python 3.10+ standard library runs the six regression checks:
 
 ```sh
-python3 experiments/replay_baseline.py --output experiments/results/baseline.json
 python3 -m unittest discover -v
-python3 experiments/search_prefix_suffix.py
-python3 experiments/search_one_move_finish.py
-python3 experiments/search_chord_trees.py
 ```
 
-Independent SageMath 10.7 verification uses a pinned Docker image with no network and a read-only mount:
+Independent SageMath 10.7 verification uses a pinned image, no network, and a read-only mount:
 
 ```sh
 docker run --rm --network none \
   -v "$PWD:/workspace:ro" -w /workspace \
   -e PYTHONDONTWRITEBYTECODE=1 \
   sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
-  sage -python experiments/verify_sage.py > experiments/results/sage-verification.json
-
-docker run --rm --network none \
-  -v "$PWD:/workspace:ro" -w /workspace \
-  -e PYTHONDONTWRITEBYTECODE=1 \
-  sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
-  sage -python experiments/classify_sage.py > experiments/results/classification-verification.json
+  sage -python experiments/verify_sage.py
 ```
 
-Obtain the image first if it is not cached. Verification itself needs no network access.
+With the image cached, neither network access nor a persistent container is needed.
+See [complete reproduction instructions](docs/REPRODUCING.md) for classification, certificate
+regeneration, bounded searches, and expected outputs.
 
-## Sources, research, and repository map
+## Current research directions
 
-The route uses the classical fixed-point axis of a circle projectivity, as described in
-Maurice Starck's [*Castillon’s problem*](https://www.polyhedra-world.nc/stuff/Castillon.pdf), 2002.
-This project supplies a deterministic seed, chord sharing, elementary traces, exact replays,
-general-parameter checks, and bounded searches. It claims neither historical priority for
-the method or counts nor global minimality. See [LITERATURE](docs/LITERATURE.md).
+First seek a complete single triangle below 14 E, then improve shared two-solution programs,
+mixed-circle prefixes, direct target hits, and robust repairs. Screening 9,878 restricted
+prefixes is not a global lower bound. See [ROADMAP](docs/ROADMAP.md) and [SEARCH](docs/SEARCH.md).
 
-The next target is a complete single triangle below 14 E. Planned work includes line-intersection
-seeds, mixed line/circle prefixes, direct target hits, robust repairs, and future Manim animations.
+## Documentation and code
 
 | Content | Entry |
 |---|---|
-| Formal inputs, targets, metrics, and claim levels | [DESIGN](docs/DESIGN.md) |
+| Inputs, targets, and claim levels | [DESIGN](docs/DESIGN.md) |
 | Elementary trace and proof | [CONSTRUCTION](docs/CONSTRUCTION.md) |
-| Existence and number of solutions | [CLASSIFICATION](docs/CLASSIFICATION.md) |
+| Existence, counts, and degeneracy | [CLASSIFICATION](docs/CLASSIFICATION.md) |
+| Full reproduction commands | [REPRODUCING](docs/REPRODUCING.md) |
 | Bounded searches already performed | [SEARCH](docs/SEARCH.md) |
-| Research priorities and animation plans | [ROADMAP](docs/ROADMAP.md) |
-| Sources and score comparability | [LITERATURE](docs/LITERATURE.md) |
-| Replays, verifiers, searches, and results | [experiments](experiments/) |
+| Research and animation plans | [ROADMAP](docs/ROADMAP.md) |
+| Sources and comparability | [LITERATURE](docs/LITERATURE.md) |
+| Research scripts | [experiments](experiments/README.md) |
+| Certificates and reports | [experiments/results](experiments/results/README.md) |
+| Regression checks | [tests](tests/README.md) |
+| Series conventions and four-project comparison | [SERIES](docs/SERIES.md) |
+
+**Construction optimization series**:
+[Euclid-Min](https://github.com/lenovobenben/euclid-min) ·
+[Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min) ·
+[Euclid-Equal-Angle-Min](https://github.com/lenovobenben/euclid-equal-angle-min) ·
+[Euclid-Castillon-Min](https://github.com/lenovobenben/euclid-castillon-min).
+
 
 ## License and citation
 
 Code, tests, and configuration use [Apache 2.0](LICENSE). Mathematical documentation,
-construction records, and research data use [CC BY 4.0](LICENSE-CONTENT).
-Third-party rights are unchanged; see [license scope](LICENSE-SCOPE.md).
-Cite **lenovobenben, Euclid-Castillon-Min**, the [repository](https://github.com/lenovobenben/euclid-castillon-min),
-and the commit or version used. Attribute and indicate modifications when reusing non-software content.
+construction records, research data, and citation metadata use [CC BY 4.0](LICENSE-CONTENT).
+Third-party rights are unchanged; see the [license scope](LICENSE-SCOPE.md).
+Use [CITATION.cff](CITATION.cff), citing **lenovobenben, Euclid-Castillon-Min**, the
+[repository](https://github.com/lenovobenben/euclid-castillon-min), and the commit or version used.
+Indicate modifications when adapting non-software content.

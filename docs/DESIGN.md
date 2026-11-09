@@ -80,3 +80,5 @@ K=4R^2S^2+p_Ap_Bp_C.
 `profiles/` 保存题目配置，`docs/` 保存数学与研究说明，`experiments/` 保存研究脚本，
 `experiments/results/` 保存可再生成的证书和报告，`tests/` 保存标准库回归检查。
 当前没有动画目录或占位视频；未来动画必须以精确重放数据为来源，Manim 仅处理显示。
+
+系列信息架构与四项目对照见 [SERIES](SERIES.md)，完整运行环境与命令见 [REPRODUCING](REPRODUCING.md)。
