@@ -20,7 +20,7 @@
 | 数据目录 | qq-ggb、proofs 等历史分层 | experiments/results | experiments/results | experiments/results |
 | 题目专属文档 | METRICS、FORMAL_MODEL、证书格式等 | MANNHEIM、GERGONNE、SHARED_INVERSION | EXISTENCE、NINE、LOWER_BOUND、REFINEMENTS | CONSTRUCTION、CLASSIFICATION、SEARCH |
 | 来源材料 | QQ 提供的 GGB，原作者未确认 | 历史构造及文献台账 | 原始问答快照、比赛题出处 | 经典不动点轴路线及文献台账 |
-| 展示 | Manim、离线网页、GeoGebra | Manim 动画 | 静态 SVG；Manim 待补 | 14 E / 17 E Manim 动画 |
+| 展示 | Manim、离线网页、GeoGebra | Manim 动画 | 静态 SVG；Manim 待补 | 割线子域 12 E / 15 E Manim 动画 |
 | 软件/内容许可 | Apache 2.0 / CC BY 4.0 | Apache 2.0 / CC BY 4.0 | 相同，保留来源快照权利 | 相同，保留第三方材料权利 |
 
 ## 2. 本次对齐的具体差异

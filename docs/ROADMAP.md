@@ -32,7 +32,7 @@ AB 严格割圆的子域已有 [12 E 完整单解、15 E 完整双解](SECANT.md
 
 ## Manim 展示
 
-已提供 [14 E 单解和 17 E 双解动画](../animations/castillon/README.md)，
+已提供 [严格割线子域的 12 E 单解和 15 E 双解动画](../animations/castillon/README.md)，
 按 Euclid-CCC-Min 的展示方式组织：
 
 - 从精确重放导出几何、父对象、交点分支、动作序号和目标出现时刻。

@@ -76,6 +76,7 @@ AB 严格割圆子域的 12/15 E 新构造使用 `experiments/replay_secant_seed
 
 ## 7. Manim 动画
 
-14 E 单解与 17 E 双解使用已提交的 `inside` 夹具证书。
+12 E 单解与 15 E 双解使用 `secant-seed.json` 中的 `inside` 夹具证书，
+动画开头和结尾均注明 AB 严格割圆的一般位置条件。
 运行 `python3 animations/castillon/export_geometry.py` 再生成两份显示数据。
 镜头测试、720p30 预览及 4K60 成片命令见 [动画说明](../animations/castillon/README.md)。

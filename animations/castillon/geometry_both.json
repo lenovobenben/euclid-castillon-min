@@ -2,17 +2,18 @@
   "schema": "euclid-castillon-min-manim/v1",
   "mode": "both",
   "source": {
-    "certificate": "experiments/results/baseline.json",
+    "certificate": "experiments/results/secant-seed.json",
     "fixture": "inside",
     "profile_sha256": "555abb3c16de5d7773d855de1b66a200514d1df4b87c8ef691cb354914512f21",
-    "trace_sha256": "1cc01971e11a953adf73d968f29123c09ee7441f6e009c4fca24e81c8671d782"
+    "trace_sha256": "90ec5dd34cd6689e1e585065518d565bdc7ac1449bc46fbb46eb19ab0cf6f02b"
   },
   "result": {
     "target": "all_edges",
     "coverage": "gen",
-    "lines": 17,
+    "restriction": "proper AB secant and generic intermediate incidences",
+    "lines": 15,
     "circles": 0,
-    "total": 17,
+    "total": 15,
     "duplicate_draws": 0
   },
   "initial": {
@@ -60,15 +61,23 @@
     },
     "U": {
       "at": [
-        -1.0,
-        0.0
+        -0.8165135515197689,
+        0.5773262683999174
       ],
       "exact": [
-        "-1",
-        "0"
+        {
+          "a": "20/221",
+          "b": "-70/221",
+          "sqrt": "41/5"
+        },
+        {
+          "a": "56/221",
+          "b": "25/221",
+          "sqrt": "41/5"
+        }
       ],
       "parents": [
-        "l1",
+        "seed_AB",
         "Gamma"
       ],
       "available_after": 1,
@@ -76,15 +85,23 @@
     },
     "V": {
       "at": [
-        1.0,
-        0.0
+        0.9975090266328911,
+        -0.0705389380831754
       ],
       "exact": [
-        "1",
-        "0"
+        {
+          "a": "20/221",
+          "b": "70/221",
+          "sqrt": "41/5"
+        },
+        {
+          "a": "56/221",
+          "b": "-25/221",
+          "sqrt": "41/5"
+        }
       ],
       "parents": [
-        "l1",
+        "seed_AB",
         "Gamma"
       ],
       "available_after": 1,
@@ -92,129 +109,129 @@
     },
     "W": {
       "at": [
-        -0.21951219512195122,
-        0.975609756097561
+        -0.31923765470891396,
+        -0.947674690922973
       ],
       "exact": [
-        "-9/41",
-        "40/41"
+        {
+          "a": "-869156/1874305",
+          "b": "18914/374861",
+          "sqrt": "41/5"
+        },
+        {
+          "a": "-1632008/1874305",
+          "b": "-10073/374861",
+          "sqrt": "41/5"
+        }
       ],
       "parents": [
         "l2",
         "Gamma"
       ],
       "available_after": 2,
-      "intersection_index": 0
+      "other_than": "U"
     },
-    "Vp": {
+    "T": {
       "at": [
-        -0.4222413052812366,
-        -0.9064834693001288
+        -0.6082058510172085,
+        -0.7937793413716643
       ],
       "exact": [
-        "-4917/11645",
-        "-10556/11645"
+        {
+          "a": "-869156/1874305",
+          "b": "-18914/374861",
+          "sqrt": "41/5"
+        },
+        {
+          "a": "-1632008/1874305",
+          "b": "10073/374861",
+          "sqrt": "41/5"
+        }
       ],
       "parents": [
         "l3",
         "Gamma"
       ],
       "available_after": 3,
-      "intersection_index": 1
+      "other_than": "V"
     },
     "R": {
       "at": [
-        -0.8220640569395018,
-        0.5693950177935944
+        -0.650353096250142,
+        0.7596320492171545
       ],
       "exact": [
-        "-231/281",
-        "160/281"
+        {
+          "a": "-4732068852/7580763305",
+          "b": "-13836186/1516152661",
+          "sqrt": "41/5"
+        },
+        {
+          "a": "5917022136/7580763305",
+          "b": "-11065327/1516152661",
+          "sqrt": "41/5"
+        }
       ],
       "parents": [
         "l4",
         "Gamma"
       ],
       "available_after": 4,
-      "intersection_index": 0
+      "other_than": "W"
     },
-    "Up": {
+    "P": {
       "at": [
-        -0.3174505319677836,
-        -0.9482748334493387
+        0.994782489366981,
+        -0.10201862010845064
       ],
       "exact": [
-        "-15963/50285",
-        "-47684/50285"
+        {
+          "a": "2522630902828/2537102603165",
+          "b": "86210082/507420520633",
+          "sqrt": "41/5"
+        },
+        {
+          "a": "-270349343496/2537102603165",
+          "b": "804426651/507420520633",
+          "sqrt": "41/5"
+        }
       ],
       "parents": [
         "l5",
         "Gamma"
       ],
       "available_after": 5,
-      "intersection_index": 1
-    },
-    "S": {
-      "at": [
-        0.9843214110730034,
-        -0.1763841254287114
-      ],
-      "exact": [
-        "2009/2041",
-        "-360/2041"
-      ],
-      "parents": [
-        "l6",
-        "Gamma"
-      ],
-      "available_after": 6,
-      "intersection_index": 1
-    },
-    "Sp": {
-      "at": [
-        -0.15294117647058825,
-        -0.9882352941176471
-      ],
-      "exact": [
-        "-13/85",
-        "-84/85"
-      ],
-      "parents": [
-        "l7",
-        "Gamma"
-      ],
-      "available_after": 7,
-      "intersection_index": 1
+      "other_than": "R"
     },
     "J": {
       "at": [
-        -0.3710264900662252,
-        -0.9868377483443709
+        -0.5604166666666667,
+        -1.1083333333333334
       ],
       "exact": [
-        "-2241/6040",
-        "-11921/12080"
+        "-269/480",
+        "-133/120"
       ],
       "parents": [
-        "l8",
-        "l9"
+        "l6",
+        "l7"
       ],
-      "available_after": 9
+      "available_after": 7
     },
     "H": {
       "at": [
-        -0.23108695652173913,
-        -0.8970652173913043
+        1.0359311740890689,
+        -0.08426113360323886
       ],
       "exact": [
-        "-1063/4600",
-        "-8253/9200"
+        "2047/1976",
+        "-333/3952"
       ],
       "parents": [
-        "l7",
-        "l10"
+        "seed_AB",
+        "l8"
       ],
-      "available_after": 10
+      "available_after": 8
     },
     "X0": {
       "at": [
@@ -237,7 +254,7 @@
         "axis",
         "Gamma"
       ],
-      "available_after": 11,
+      "available_after": 9,
       "intersection_index": 0
     },
     "X1": {
@@ -261,7 +278,7 @@
         "axis",
         "Gamma"
       ],
-      "available_after": 11,
+      "available_after": 9,
       "intersection_index": 1
     },
     "Y0": {
@@ -285,7 +302,7 @@
         "edge_A_0",
         "Gamma"
       ],
-      "available_after": 12,
+      "available_after": 10,
       "other_than": "X0"
     },
     "Z0": {
@@ -309,7 +326,7 @@
         "edge_B_0",
         "Gamma"
       ],
-      "available_after": 13,
+      "available_after": 11,
       "other_than": "Y0"
     },
     "Y1": {
@@ -333,7 +350,7 @@
         "edge_A_1",
         "Gamma"
       ],
-      "available_after": 15,
+      "available_after": 13,
       "other_than": "X1"
     },
     "Z1": {
@@ -357,23 +374,23 @@
         "edge_B_1",
         "Gamma"
       ],
-      "available_after": 16,
+      "available_after": 14,
       "other_than": "Y1"
     }
   },
   "events": [
     {
       "e_move": 1,
-      "id": "l1",
+      "id": "seed_AB",
       "op": "line",
       "references": [
-        "O",
-        "A"
+        "A",
+        "B"
       ],
       "geometry": [
-        0.0,
         1.0,
-        0.0
+        2.8,
+        -0.8
       ],
       "new_points": [
         "U",
@@ -386,12 +403,12 @@
       "op": "line",
       "references": [
         "U",
-        "B"
+        "C"
       ],
       "geometry": [
         1.0,
-        -0.8,
-        1.0
+        0.32608235015907683,
+        0.6282576451113538
       ],
       "new_points": [
         "W"
@@ -402,16 +419,16 @@
       "id": "l3",
       "op": "line",
       "references": [
-        "W",
+        "V",
         "C"
       ],
       "geometry": [
         1.0,
-        -0.10771470160116449,
-        0.3245997088791849
+        -2.220167554728833,
+        -1.1541172883101831
       ],
       "new_points": [
-        "Vp"
+        "T"
       ]
     },
     {
@@ -419,13 +436,13 @@
       "id": "l4",
       "op": "line",
       "references": [
-        "V",
+        "W",
         "B"
       ],
       "geometry": [
         1.0,
-        3.2,
-        -1.0
+        0.19394021809698453,
+        0.5030298909515077
       ],
       "new_points": [
         "R"
@@ -437,15 +454,15 @@
       "op": "line",
       "references": [
         "R",
-        "C"
+        "A"
       ],
       "geometry": [
         1.0,
-        0.3324922904401458,
-        0.632744603308102
+        1.909283708796668,
+        -0.8
       ],
       "new_points": [
-        "Up"
+        "P"
       ]
     },
     {
@@ -453,33 +470,31 @@
       "id": "l6",
       "op": "line",
       "references": [
-        "W",
-        "A"
+        "U",
+        "T"
       ],
       "geometry": [
         1.0,
-        1.045,
-        -0.8
+        0.15192680929754443,
+        0.7288022136381116
       ],
-      "new_points": [
-        "S"
-      ]
+      "new_points": []
     },
     {
       "e_move": 7,
       "id": "l7",
       "op": "line",
       "references": [
-        "U",
-        "C"
+        "V",
+        "W"
       ],
       "geometry": [
         1.0,
-        0.8571428571428571,
-        1.0
+        -1.5011891569563,
+        -1.1034013156265658
       ],
       "new_points": [
-        "Sp"
+        "J"
       ]
     },
     {
@@ -487,52 +502,20 @@
       "id": "l8",
       "op": "line",
       "references": [
-        "U",
-        "Vp"
+        "T",
+        "P"
       ],
       "geometry": [
         1.0,
-        0.6373626373626373,
-        1.0
-      ],
-      "new_points": []
-    },
-    {
-      "e_move": 9,
-      "id": "l9",
-      "op": "line",
-      "references": [
-        "V",
-        "Up"
-      ],
-      "geometry": [
-        1.0,
-        -1.3893129770992367,
-        -1.0
-      ],
-      "new_points": [
-        "J"
-      ]
-    },
-    {
-      "e_move": 10,
-      "id": "l10",
-      "op": "line",
-      "references": [
-        "S",
-        "Up"
-      ],
-      "geometry": [
-        1.0,
-        -1.6864718405264176,
-        -1.281788271724405
+        -2.317258397465813,
+        -1.231185993511163
       ],
       "new_points": [
         "H"
       ]
     },
     {
-      "e_move": 11,
+      "e_move": 9,
       "id": "axis",
       "op": "line",
       "references": [
@@ -550,7 +533,7 @@
       ]
     },
     {
-      "e_move": 12,
+      "e_move": 10,
       "id": "edge_A_0",
       "op": "line",
       "references": [
@@ -567,7 +550,7 @@
       ]
     },
     {
-      "e_move": 13,
+      "e_move": 11,
       "id": "edge_B_0",
       "op": "line",
       "references": [
@@ -584,7 +567,7 @@
       ]
     },
     {
-      "e_move": 14,
+      "e_move": 12,
       "id": "edge_C_0",
       "op": "line",
       "references": [
@@ -599,7 +582,7 @@
       "new_points": []
     },
     {
-      "e_move": 15,
+      "e_move": 13,
       "id": "edge_A_1",
       "op": "line",
       "references": [
@@ -616,7 +599,7 @@
       ]
     },
     {
-      "e_move": 16,
+      "e_move": 14,
       "id": "edge_B_1",
       "op": "line",
       "references": [
@@ -633,7 +616,7 @@
       ]
     },
     {
-      "e_move": 17,
+      "e_move": 15,
       "id": "edge_C_1",
       "op": "line",
       "references": [
@@ -660,8 +643,8 @@
         "edge_B_0",
         "edge_C_0"
       ],
-      "vertices_at": 13,
-      "edges_at": 14
+      "vertices_at": 11,
+      "edges_at": 12
     },
     {
       "vertices": [
@@ -674,8 +657,8 @@
         "edge_B_1",
         "edge_C_1"
       ],
-      "vertices_at": 16,
-      "edges_at": 17
+      "vertices_at": 14,
+      "edges_at": 15
     }
   ]
 }

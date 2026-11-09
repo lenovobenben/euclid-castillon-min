@@ -2,27 +2,27 @@
 
 [简体中文](README.md) · **English**
 
-**Draw one solution triangle with 14 lines, or both solution triangles with 17 lines. No additional circles are drawn.**
+**With a proper AB secant in generic position, draw one solution triangle with 12 lines, or both with 15 lines.**
 
 Given a circle, its center, and three points, construct an inscribed triangle whose side
 lines respectively pass through those points. This project provides step-by-step animations, elementary traces,
 general-parameter proofs, independent exact verification, solution classification, and bounded searches.
-**14 and 17 E are verified generic upper bounds. Global minimality and full-domain robust bounds remain open.**
+**Generic upper bounds are 14 and 17 E over the full two-solution domain, and 12 and 15 E on the proper-secant subdomain. Global minimality and full-domain robust bounds remain open.**
 
-[Watch the 17 E two-solution animation](animations/castillon/media/CastillonBoth_4k60.mp4) ·
-[14 E single-solution animation](animations/castillon/media/CastillonOne_4k60.mp4) ·
-[Construction and proof](docs/CONSTRUCTION.md) · [Exact verification](experiments/results/sage-verification.json)
+[Watch the 15 E two-solution animation](animations/castillon/media/CastillonBoth_15E_4k60.mp4) ·
+[12 E single-solution animation](animations/castillon/media/CastillonOne_12E_4k60.mp4) ·
+[Secant construction and proof](docs/SECANT.md) · [Exact verification](experiments/results/secant-seed-verification.json)
 
-[![17 E construction of both solutions](animations/castillon/preview.png)](animations/castillon/media/CastillonBoth_4k60.mp4)
+[![15 E construction on the proper-secant subdomain](animations/castillon/preview.png)](animations/castillon/media/CastillonBoth_15E_4k60.mp4)
 
-*Click the preview to view or download the two-solution animation, 3840 × 2160, 60 fps, approximately 67 seconds.*
+*Click the preview to view or download the two-solution animation, 3840 × 2160, 60 fps, approximately 64 seconds. The single-solution video is approximately 55 seconds.*
 
 ## Explore the constructions
 
-| Animation | Target | Duration | Video |
-|---|---|---:|---|
-| One solution in 14 E | One complete triangle, using 14 lines | About 58 seconds | [4K60 MP4](animations/castillon/media/CastillonOne_4k60.mp4) |
-| Both solutions in 17 E | Two complete triangles, using 17 lines | About 67 seconds | [4K60 MP4](animations/castillon/media/CastillonBoth_4k60.mp4) |
+| Animation | Target | Scope | Video |
+|---|---|---|---|
+| One solution in 12 E | One complete triangle, using 12 lines | Generic proper AB secant | [4K60 MP4](animations/castillon/media/CastillonOne_12E_4k60.mp4) |
+| Both solutions in 15 E | Two complete triangles, using 15 lines | Generic proper AB secant | [4K60 MP4](animations/castillon/media/CastillonBoth_15E_4k60.mp4) |
 
 The videos use a dark blue background, Chinese captions, and thin lines. Magenta denotes free inputs,
 gold the current move, pale blue auxiliary objects, and green the targets. Each draw highlights
@@ -30,9 +30,10 @@ its two existing reference points and shows the cumulative E count. The visual s
 [Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min).
 
 Geometry is exported from exact replay and checked against the committed certificate. The videos use
-the `inside` fixture, with all three given points inside the circle. The fixed-point axis is drawn
-at move 11, followed by the triangle sides. Each video starts from the free inputs, sharing the
-first 14 moves. All vertices appear at move 16 in the two-solution video. The independent 15 E
+the `inside` fixture, with all three given points inside the circle. The first move draws AB.
+Forward and inverse projections produce the fixed-point axis at move 9. Each video starts from
+the free inputs, sharing the first 12 moves. All vertices appear at move 14 in the two-solution
+video. The independent 13 E
 vertex-only program omits the final side of the first triangle.
 
 See the [animation guide](animations/castillon/README.md) for geometry export, viewport tests,

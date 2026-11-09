@@ -24,17 +24,17 @@ AUXILIARY = "#8AC6D9"
 TARGET = "#5DE2A5"
 GEOMETRY_SCALE = 2.55
 OVERVIEW_WIDTH = 13.5
-LABELS = {"Up": "U′", "Vp": "V′", "Sp": "S′"}
-LABELS.update({
+LABELS = {
     f"{letter}{index}": f"{letter}{'₀₁'[index]}"
     for letter in "XYZ" for index in range(2)
-})
+}
 PHASES = {
-    1: "1–7 E · 取得三组对应点",
-    8: "8–10 E · 找到轴上两点",
-    11: "11 E · 画出不动点轴",
-    12: "12–14 E · 恢复第一个三角形",
-    15: "15–17 E · 恢复第二个三角形",
+    1: "1–3 E · 复用同一条割线",
+    4: "4–5 E · 逆向投影",
+    6: "6–8 E · 找到轴上两点",
+    9: "9 E · 画出不动点轴",
+    10: "10–12 E · 恢复第一个三角形",
+    13: "13–15 E · 恢复第二个三角形",
 }
 
 
@@ -103,7 +103,7 @@ class CastillonConstruction(MovingCameraScene):
         ).move_to(DOWN * 1.25)
         rules = self.text(
             "画一条直线计 1 E · 已有对象的交点免费\n"
-            "一般位置下的已验证上界",
+            "AB 与 Γ 有两个不同交点 · 割线子域的一般位置",
             font_size=21, color=MUTED, line_spacing=1.2,
         ).move_to(DOWN * 2.3)
         page = VGroup(title, subtitle, problem, count, rules)
@@ -210,9 +210,9 @@ class CastillonConstruction(MovingCameraScene):
         self.play(UpdateFromAlphaFunc(frame, interpolate), run_time=1.1)
 
     def adjust_camera(self, event):
-        if event["e_move"] == 11:
+        if event["e_move"] == 9:
             j, h = (self.data["points"][name]["at"] for name in ("J", "H"))
-            self.move_camera(((j[0] + h[0]) / 2, (j[1] + h[1]) / 2), 4.4)
+            self.move_camera(((j[0] + h[0]) / 2, (j[1] + h[1]) / 2), 9.2)
 
     def assert_references_visible(self, event):
         frame = self.camera.frame
@@ -313,7 +313,7 @@ class CastillonConstruction(MovingCameraScene):
             self.lines[event["id"]] = full
             self.add(full)
             self.play(FadeOut(references), run_time=0.2)
-            if step == 11:
+            if step == 9:
                 self.move_camera((0, 0), OVERVIEW_WIDTH)
             width = 0.4
             self.screen_strokes.append([full, width])
@@ -322,25 +322,34 @@ class CastillonConstruction(MovingCameraScene):
             for name in event["new_points"]:
                 is_target = any(name in target["vertices"] for target in self.data["targets"])
                 self.reveal_point(name, TARGET if is_target else FOREGROUND, permanent=is_target)
-            if step == 7:
+            if step == 1:
+                self.detail_text = "AB 与 Γ 交于 U、V\nI_A、I_B 都交换 U、V"
+                self.rebuild_hud()
+                self.wait(1.2)
+            if step == 3:
+                self.detail_text = "记复合映射 f=I_C I_B I_A\nf(U)=W    f(V)=T"
+                self.rebuild_hud()
+                self.wait(1.2)
+            if step == 5:
                 self.detail_text = (
-                    "依次经过 A、B、C 取另一圆交点，记复合映射为 f\n"
-                    "f(U)=U′    f(V)=V′    f(S)=S′"
+                    "沿逆向链 P → R → W → U，得到第三组对应点\n"
+                    "f(U)=W    f(V)=T    f(P)=U"
                 )
                 self.rebuild_hud()
                 self.wait(1.7)
-            if step == 11:
+            if step == 9:
                 self.detail_text = "JH 为不动点轴 · 与 Γ 的两个交点给出 X₀、X₁"
                 self.rebuild_hud()
                 self.wait(1.6)
-            for target in self.data["targets"]:
+            for index, target in enumerate(self.data["targets"]):
                 if target["vertices_at"] == step:
                     self.detail_text = f"{step} E · 三个顶点就绪，下一笔补齐第三条边"
                     self.rebuild_hud()
                     self.wait(0.9)
                 if target["edges_at"] == step:
                     self.complete_triangle(target)
-                    self.detail_text = f"{step} E · {'第一个' if step == 14 else '第二个'}完整三角形"
+                    ordinal = "第一个" if index == 0 else "第二个"
+                    self.detail_text = f"{step} E · {ordinal}完整三角形"
                     self.rebuild_hud()
                     self.wait(1.1)
             self.wait(0.25)
@@ -356,20 +365,20 @@ class CastillonConstruction(MovingCameraScene):
             if name not in self.point_labels
         ))
         self.play(FadeOut(hidden), run_time=0.3)
-        self.phase_text = f"{'一个' if self.mode == 'one' else '两个'}完整三角形 · 一般位置"
+        self.phase_text = f"{'一个' if self.mode == 'one' else '两个'}完整三角形 · AB 严格割圆"
         self.detail_text = (
-            "三个顶点 13 E · 完整三角形 14 E" if self.mode == "one"
-            else "第一完整三角形 14 E · 两个完整三角形 17 E"
+            "一般位置 · 三个顶点 11 E · 完整三角形 12 E" if self.mode == "one"
+            else "一般位置 · 第一完整三角形 12 E · 两个完整三角形 15 E"
         )
         self.rebuild_hud()
         self.wait(4.0)
 
 
 class CastillonOne(CastillonConstruction):
-    """One complete triangle, 14 E."""
+    """One complete triangle in the proper-secant subdomain, 12 E."""
 
 
 class CastillonBoth(CastillonConstruction):
-    """Both complete triangles, 17 E."""
+    """Both complete triangles in the proper-secant subdomain, 15 E."""
 
     mode = "both"

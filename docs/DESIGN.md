@@ -79,7 +79,7 @@ K=4R^2S^2+p_Ap_Bp_C.
 
 `profiles/` 保存题目配置，`docs/` 保存数学与研究说明，`experiments/` 保存研究脚本，
 `experiments/results/` 保存可再生成的证书和报告，`tests/` 保存标准库回归检查。
-`animations/castillon/` 保存 14 E 单解和 17 E 双解动画。几何数据来自精确重放并与
-已提交证书核对，Manim 处理显示；每笔显示定位点与累计 E。
+`animations/castillon/` 保存严格割线子域的 12 E 单解和 15 E 双解动画。
+几何数据来自精确重放并与已提交证书核对，Manim 处理显示，每笔显示定位点与累计 E。
 
 系列信息架构与四项目对照见 [SERIES](SERIES.md)，完整运行环境与命令见 [REPRODUCING](REPRODUCING.md)。

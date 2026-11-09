@@ -4,5 +4,5 @@ __pycache__/
 .DS_Store
 .ruff_cache/
 animations/**/media/*
-!animations/castillon/media/CastillonOne_4k60.mp4
-!animations/castillon/media/CastillonBoth_4k60.mp4
+!animations/castillon/media/CastillonOne_12E_4k60.mp4
+!animations/castillon/media/CastillonBoth_15E_4k60.mp4

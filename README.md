@@ -2,35 +2,35 @@
 
 **简体中文** · [English](README.en.md)
 
-**只画 14 条直线，完成一个目标三角形；只画 17 条直线，完成两个目标三角形。**
+**AB 割圆的一般位置下，只画 12 条直线完成一个目标三角形，15 条直线完成两个目标三角形。**
 
 给定圆、圆心和三个点，研究 Cramer–Castillon 问题：作圆内接三角形，使三边所在直线
 分别经过给定点。本项目提供逐步动画、逐笔构造、一般参数证明、独立精确核验、解数分类及有界搜索。
-**14、17 E 是一般位置上的已验证上界，尚未证明全局最小，完整域鲁棒上界待研究。**
+**整个二解域的一般位置上界为 14、17 E，严格割线子域为 12、15 E。全局最小性与完整域鲁棒上界待研究。**
 
-[观看 17 E 双解动画](animations/castillon/media/CastillonBoth_4k60.mp4) ·
-[14 E 单解动画](animations/castillon/media/CastillonOne_4k60.mp4) ·
-[构造与证明](docs/CONSTRUCTION.md) · [精确核验](experiments/results/sage-verification.json)
+[观看 15 E 双解动画](animations/castillon/media/CastillonBoth_15E_4k60.mp4) ·
+[12 E 单解动画](animations/castillon/media/CastillonOne_12E_4k60.mp4) ·
+[割线构造与证明](docs/SECANT.md) · [精确核验](experiments/results/secant-seed-verification.json)
 
-[![17 E 双解构造](animations/castillon/preview.png)](animations/castillon/media/CastillonBoth_4k60.mp4)
+[![严格割线子域的 15 E 双解构造](animations/castillon/preview.png)](animations/castillon/media/CastillonBoth_15E_4k60.mp4)
 
-*点击预览图查看或下载双解动画，3840 × 2160，60 fps，约 67 秒。*
+*点击预览图查看或下载双解动画，3840 × 2160，60 fps，约 64 秒。单解动画约 55 秒。*
 
 ## 先看演示
 
-| 动画 | 完成的目标 | 时长 | 成片 |
-|---|---|---:|---|
-| 14 E 单解 | 一个完整三角形，14 条直线 | 约 58 秒 | [4K60 MP4](animations/castillon/media/CastillonOne_4k60.mp4) |
-| 17 E 双解 | 两个完整三角形，17 条直线 | 约 67 秒 | [4K60 MP4](animations/castillon/media/CastillonBoth_4k60.mp4) |
+| 动画 | 完成的目标 | 适用范围 | 成片 |
+|---|---|---|---|
+| 12 E 单解 | 一个完整三角形，12 条直线 | AB 严格割圆的一般位置 | [4K60 MP4](animations/castillon/media/CastillonOne_12E_4k60.mp4) |
+| 15 E 双解 | 两个完整三角形，15 条直线 | AB 严格割圆的一般位置 | [4K60 MP4](animations/castillon/media/CastillonBoth_15E_4k60.mp4) |
 
 动画采用深蓝背景、中文字幕和细线。洋红色表示免费输入，金色表示当前一笔，
 淡蓝色表示辅助对象，绿色表示目标。每次落笔前标出两个已有定位点，并显示累计 E。
 视觉风格参考 [Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min)。
 
 几何数据从精确重放导出，并逐项核对已提交证书。演示采用三个输入点均在圆内的
-`inside` 夹具，第 11 E 画出不动点轴，随后恢复三角形。
-两段视频各自从免费输入开始，共用前 14 E。双解片的全部顶点在第 16 E 出现；
-独立的 15 E 顶点程序省去第一解的补边动作。
+`inside` 夹具，首笔画 AB，复用正向与逆向投影，在第 9 E 画出不动点轴。
+两段视频各自从免费输入开始，共用前 12 E。双解片的全部顶点在第 14 E 出现；
+独立的 13 E 顶点程序省去第一解的补边动作。
 
 导出、镜头测试和渲染命令见 [动画说明](animations/castillon/README.md)。
 

@@ -1,4 +1,4 @@
-"""Export the certified 14/17 E programs for display in Manim."""
+"""Export the certified restricted 12/15 E programs for display in Manim."""
 
 from __future__ import annotations
 
@@ -11,7 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "experiments"))
 
-from castillon import FIXTURES, Q, baseline, circle_meet, encode, finish
+from castillon import FIXTURES, Q, circle_meet, encode, finish
+from replay_secant_seed import secant_baseline
 
 
 OUTPUT_DIRECTORY = Path(__file__).parent
@@ -27,13 +28,14 @@ def approximate(value):
 
 def build_export(mode):
     target = MODES[mode]
-    certificate = json.loads((ROOT / "experiments/results/baseline.json").read_text("utf-8"))
+    certificate_path = "experiments/results/secant-seed.json"
+    certificate = json.loads((ROOT / certificate_path).read_text("utf-8"))
     profile_path = ROOT / "profiles/castillon-d2-e-generic-v1.json"
     profile_bytes = profile_path.read_bytes().replace(b"\r\n", b"\n")
     if certificate["profile_sha256"] != hashlib.sha256(profile_bytes).hexdigest():
         raise ValueError("certificate profile hash does not match")
     report = next(item for item in certificate["reports"] if item["fixture"] == FIXTURE)
-    replay = finish(baseline(*FIXTURES[FIXTURE]), all_solutions=mode == "both")
+    replay = finish(secant_baseline(*FIXTURES[FIXTURE]), all_solutions=mode == "both")
     if (
         report["input"] != encode(FIXTURES[FIXTURE])
         or report["programs"][target] != replay.program
@@ -98,12 +100,17 @@ def build_export(mode):
         "schema": "euclid-castillon-min-manim/v1",
         "mode": mode,
         "source": {
-            "certificate": "experiments/results/baseline.json",
+            "certificate": certificate_path,
             "fixture": FIXTURE,
             "profile_sha256": certificate["profile_sha256"],
             "trace_sha256": hashlib.sha256(trace_bytes).hexdigest(),
         },
-        "result": {"target": target, "coverage": "gen", **replay.score},
+        "result": {
+            "target": target,
+            "coverage": "gen",
+            "restriction": certificate["restriction"],
+            **replay.score,
+        },
         "initial": {"circle": {"id": "Gamma", "center": [0, 0], "radius": 1}},
         "points": points,
         "events": events,

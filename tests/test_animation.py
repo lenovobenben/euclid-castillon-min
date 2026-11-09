@@ -11,7 +11,7 @@ HAS_MANIM = importlib.util.find_spec("manim") is not None
 if HAS_MANIM:
     from manim import tempconfig
     from animations.castillon.castillon_progress import (
-        CastillonBoth, CastillonOne, GEOMETRY_SCALE, OVERVIEW_WIDTH, clipped_line,
+        CastillonBoth, CastillonOne, GEOMETRY_SCALE, OVERVIEW_WIDTH, TARGET, clipped_line,
     )
 
 
@@ -21,9 +21,13 @@ class AnimationDataTests(unittest.TestCase):
             with self.subTest(mode=mode):
                 saved = json.loads((OUTPUT_DIRECTORY / f"geometry_{mode}.json").read_text("utf-8"))
                 self.assertEqual(saved, build_export(mode))
+                self.assertEqual(
+                    saved["source"]["certificate"], "experiments/results/secant-seed.json",
+                )
+                self.assertIn("proper AB secant", saved["result"]["restriction"])
 
     def test_every_draw_uses_existing_points_and_intersections(self):
-        for mode, count in (("one", 14), ("both", 17)):
+        for mode, count in (("one", 12), ("both", 15)):
             with self.subTest(mode=mode):
                 data = build_export(mode)
                 available = {"Gamma", "O", "A", "B", "C"}
@@ -49,12 +53,13 @@ class AnimationDataTests(unittest.TestCase):
 
     def test_shared_prefix_and_actual_movie_milestones(self):
         one, both = (build_export(mode) for mode in MODES)
-        self.assertEqual(one["events"], both["events"][:14])
+        self.assertEqual(one["events"], both["events"][:12])
         self.assertEqual(len(one["targets"]), 1)
         self.assertEqual(len(both["targets"]), 2)
         self.assertEqual([(t["vertices_at"], t["edges_at"]) for t in both["targets"]],
-                         [(13, 14), (16, 17)])
-        self.assertEqual(both["events"][10]["new_points"], ["X0", "X1"])
+                         [(11, 12), (14, 15)])
+        self.assertEqual(both["events"][8]["new_points"], ["X0", "X1"])
+        self.assertEqual(both["events"][0]["references"], ["A", "B"])
 
 
 @unittest.skipUnless(HAS_MANIM, "requires the Manim rendering environment")
@@ -73,9 +78,24 @@ class AnimationViewportTests(unittest.TestCase):
                         scene.adjust_camera(event)
                         scene.assert_references_visible(event)
                         scene.make_line(event, scene.visible_bounds())
-                        if event["e_move"] == 11:
+                        if event["e_move"] == 9:
                             scene.move_camera((0, 0), OVERVIEW_WIDTH)
                     self.assertGreater(scene.camera.frame.height / 2, GEOMETRY_SCALE + 0.5)
+                    scene.current_step = scene.total_moves
+                    scene.finish_construction()
+                    for target in scene.data["targets"]:
+                        for vertex in target["vertices"]:
+                            label = scene.point_label(vertex, TARGET)
+                            for backdrop in scene.hud[::2]:
+                                horizontal_overlap = (
+                                    label.get_left()[0] < backdrop.get_right()[0]
+                                    and label.get_right()[0] > backdrop.get_left()[0]
+                                )
+                                vertical_overlap = (
+                                    label.get_bottom()[1] < backdrop.get_top()[1]
+                                    and label.get_top()[1] > backdrop.get_bottom()[1]
+                                )
+                                self.assertFalse(horizontal_overlap and vertical_overlap, vertex)
 
     def test_infinite_lines_clip_to_the_viewport(self):
         bounds = (-1, 1, -1, 1)
