@@ -41,9 +41,11 @@ def main():
             }
         )
     profile = json.loads(PROFILE.read_text())
+    # Normalize checkout line endings for portable certificate hashes.
+    profile_bytes = PROFILE.read_bytes().replace(b"\r\n", b"\n")
     result = {
         "profile_id": profile["id"],
-        "profile_sha256": hashlib.sha256(PROFILE.read_bytes()).hexdigest(),
+        "profile_sha256": hashlib.sha256(profile_bytes).hexdigest(),
         "metric": profile["metric"],
         "claim": "exact fixture replays; no minimality claim",
         "reports": reports,

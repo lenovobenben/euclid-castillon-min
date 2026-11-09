@@ -208,7 +208,9 @@ def replays(path):
     profile_path = path.parents[2] / "profiles/castillon-d2-e-generic-v1.json"
     profile = json.loads(profile_path.read_text())
     assert data["profile_id"] == profile["id"]
-    assert data["profile_sha256"] == hashlib.sha256(profile_path.read_bytes()).hexdigest()
+    # Normalize checkout line endings for portable certificate hashes.
+    profile_bytes = profile_path.read_bytes().replace(b"\r\n", b"\n")
+    assert data["profile_sha256"] == hashlib.sha256(profile_bytes).hexdigest()
     assert data["metric"] == profile["metric"] == "e_move"
     reports = []
     for report in data["reports"]:
