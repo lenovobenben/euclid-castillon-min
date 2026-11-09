@@ -13,4 +13,4 @@
 | [search_chord_trees.py](search_chord_trees.py) | 受限弦线树与交叉弦轴构造的枚举 |
 
 生成数据保存到 [results](results/README.md)。搜索范围与未覆盖候选见 [SEARCH](../docs/SEARCH.md)。
-有界未命中不成为全局最小性证据；动画后续只读取验证后轨迹。
+有界未命中不成为全局最小性证据；[Manim 动画](../animations/castillon/README.md)读取验证后的精确轨迹。

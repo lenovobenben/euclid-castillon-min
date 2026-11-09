@@ -2,7 +2,8 @@
 
 ## 1. 环境与快速检查
 
-从项目根目录运行。六项标准库检查仅需 Python 3.10+：
+从项目根目录运行。几何、搜索和动画数据检查仅需 Python 3.10+，
+镜头与直线裁剪检查在安装 Manim 的环境中运行：
 
 ```sh
 python3 -m unittest discover -v
@@ -68,3 +69,9 @@ Docker 参数、固定镜像和容器内脚本保持不变。安装本地 Sage 1
 `sage -python experiments/verify_sage.py` 与 `sage -python experiments/classify_sage.py`。
 
 验证器使用断言进行精确检查，不支持 python -O。数值可视化或浮点筛查不能替代核验。
+
+## 7. Manim 动画
+
+14 E 单解与 17 E 双解使用已提交的 `inside` 夹具证书。
+运行 `python3 animations/castillon/export_geometry.py` 再生成两份显示数据。
+镜头测试、720p30 预览及 4K60 成片命令见 [动画说明](../animations/castillon/README.md)。

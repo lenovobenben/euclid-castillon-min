@@ -1,0 +1,570 @@
+{
+  "schema": "euclid-castillon-min-manim/v1",
+  "mode": "one",
+  "source": {
+    "certificate": "experiments/results/baseline.json",
+    "fixture": "inside",
+    "profile_sha256": "555abb3c16de5d7773d855de1b66a200514d1df4b87c8ef691cb354914512f21",
+    "trace_sha256": "9c082d87bc86ba7625d66be117d72a25d471efe9419373bc2eef32e7924ae089"
+  },
+  "result": {
+    "target": "one_edges",
+    "coverage": "gen",
+    "lines": 14,
+    "circles": 0,
+    "total": 14,
+    "duplicate_draws": 0
+  },
+  "initial": {
+    "circle": {
+      "id": "Gamma",
+      "center": [
+        0,
+        0
+      ],
+      "radius": 1
+    }
+  },
+  "points": {
+    "O": {
+      "at": [
+        0.0,
+        0.0
+      ],
+      "parents": [],
+      "available_after": 0
+    },
+    "A": {
+      "at": [
+        0.8,
+        0.0
+      ],
+      "parents": [],
+      "available_after": 0
+    },
+    "B": {
+      "at": [
+        -0.6,
+        0.5
+      ],
+      "parents": [],
+      "available_after": 0
+    },
+    "C": {
+      "at": [
+        -0.4,
+        -0.7
+      ],
+      "parents": [],
+      "available_after": 0
+    },
+    "U": {
+      "at": [
+        -1.0,
+        0.0
+      ],
+      "exact": [
+        "-1",
+        "0"
+      ],
+      "parents": [
+        "l1",
+        "Gamma"
+      ],
+      "available_after": 1,
+      "intersection_index": 0
+    },
+    "V": {
+      "at": [
+        1.0,
+        0.0
+      ],
+      "exact": [
+        "1",
+        "0"
+      ],
+      "parents": [
+        "l1",
+        "Gamma"
+      ],
+      "available_after": 1,
+      "intersection_index": 1
+    },
+    "W": {
+      "at": [
+        -0.21951219512195122,
+        0.975609756097561
+      ],
+      "exact": [
+        "-9/41",
+        "40/41"
+      ],
+      "parents": [
+        "l2",
+        "Gamma"
+      ],
+      "available_after": 2,
+      "intersection_index": 0
+    },
+    "Vp": {
+      "at": [
+        -0.4222413052812366,
+        -0.9064834693001288
+      ],
+      "exact": [
+        "-4917/11645",
+        "-10556/11645"
+      ],
+      "parents": [
+        "l3",
+        "Gamma"
+      ],
+      "available_after": 3,
+      "intersection_index": 1
+    },
+    "R": {
+      "at": [
+        -0.8220640569395018,
+        0.5693950177935944
+      ],
+      "exact": [
+        "-231/281",
+        "160/281"
+      ],
+      "parents": [
+        "l4",
+        "Gamma"
+      ],
+      "available_after": 4,
+      "intersection_index": 0
+    },
+    "Up": {
+      "at": [
+        -0.3174505319677836,
+        -0.9482748334493387
+      ],
+      "exact": [
+        "-15963/50285",
+        "-47684/50285"
+      ],
+      "parents": [
+        "l5",
+        "Gamma"
+      ],
+      "available_after": 5,
+      "intersection_index": 1
+    },
+    "S": {
+      "at": [
+        0.9843214110730034,
+        -0.1763841254287114
+      ],
+      "exact": [
+        "2009/2041",
+        "-360/2041"
+      ],
+      "parents": [
+        "l6",
+        "Gamma"
+      ],
+      "available_after": 6,
+      "intersection_index": 1
+    },
+    "Sp": {
+      "at": [
+        -0.15294117647058825,
+        -0.9882352941176471
+      ],
+      "exact": [
+        "-13/85",
+        "-84/85"
+      ],
+      "parents": [
+        "l7",
+        "Gamma"
+      ],
+      "available_after": 7,
+      "intersection_index": 1
+    },
+    "J": {
+      "at": [
+        -0.3710264900662252,
+        -0.9868377483443709
+      ],
+      "exact": [
+        "-2241/6040",
+        "-11921/12080"
+      ],
+      "parents": [
+        "l8",
+        "l9"
+      ],
+      "available_after": 9
+    },
+    "H": {
+      "at": [
+        -0.23108695652173913,
+        -0.8970652173913043
+      ],
+      "exact": [
+        "-1063/4600",
+        "-8253/9200"
+      ],
+      "parents": [
+        "l7",
+        "l10"
+      ],
+      "available_after": 10
+    },
+    "X0": {
+      "at": [
+        0.9937872017706688,
+        -0.11129688943013705
+      ],
+      "exact": [
+        {
+          "a": "2159/6344",
+          "b": "1802/3965",
+          "sqrt": "611815/295936"
+        },
+        {
+          "a": "-6731/12688",
+          "b": "1156/3965",
+          "sqrt": "611815/295936"
+        }
+      ],
+      "parents": [
+        "axis",
+        "Gamma"
+      ],
+      "available_after": 11,
+      "intersection_index": 0
+    },
+    "X1": {
+      "at": [
+        -0.31314407440622993,
+        -0.9497056326379588
+      ],
+      "exact": [
+        {
+          "a": "2159/6344",
+          "b": "-1802/3965",
+          "sqrt": "611815/295936"
+        },
+        {
+          "a": "-6731/12688",
+          "b": "-1156/3965",
+          "sqrt": "611815/295936"
+        }
+      ],
+      "parents": [
+        "axis",
+        "Gamma"
+      ],
+      "available_after": 11,
+      "intersection_index": 1
+    },
+    "Y0": {
+      "at": [
+        -0.5969308383708678,
+        0.8022926985844088
+      ],
+      "exact": [
+        {
+          "a": "4085/20936",
+          "b": "-7208/13085",
+          "sqrt": "611815/295936"
+        },
+        {
+          "a": "5035/10468",
+          "b": "2924/13085",
+          "sqrt": "611815/295936"
+        }
+      ],
+      "parents": [
+        "edge_A_0",
+        "Gamma"
+      ],
+      "available_after": 12,
+      "other_than": "X0"
+    },
+    "Z0": {
+      "at": [
+        -0.6130973757170639,
+        -0.7900073467309335
+      ],
+      "exact": [
+        {
+          "a": "-11999/16573",
+          "b": "6392/82865",
+          "sqrt": "611815/295936"
+        },
+        {
+          "a": "-7943/66292",
+          "b": "-38624/82865",
+          "sqrt": "611815/295936"
+        }
+      ],
+      "parents": [
+        "edge_B_0",
+        "Gamma"
+      ],
+      "available_after": 13,
+      "other_than": "Y0"
+    }
+  },
+  "events": [
+    {
+      "e_move": 1,
+      "id": "l1",
+      "op": "line",
+      "references": [
+        "O",
+        "A"
+      ],
+      "geometry": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "new_points": [
+        "U",
+        "V"
+      ]
+    },
+    {
+      "e_move": 2,
+      "id": "l2",
+      "op": "line",
+      "references": [
+        "U",
+        "B"
+      ],
+      "geometry": [
+        1.0,
+        -0.8,
+        1.0
+      ],
+      "new_points": [
+        "W"
+      ]
+    },
+    {
+      "e_move": 3,
+      "id": "l3",
+      "op": "line",
+      "references": [
+        "W",
+        "C"
+      ],
+      "geometry": [
+        1.0,
+        -0.10771470160116449,
+        0.3245997088791849
+      ],
+      "new_points": [
+        "Vp"
+      ]
+    },
+    {
+      "e_move": 4,
+      "id": "l4",
+      "op": "line",
+      "references": [
+        "V",
+        "B"
+      ],
+      "geometry": [
+        1.0,
+        3.2,
+        -1.0
+      ],
+      "new_points": [
+        "R"
+      ]
+    },
+    {
+      "e_move": 5,
+      "id": "l5",
+      "op": "line",
+      "references": [
+        "R",
+        "C"
+      ],
+      "geometry": [
+        1.0,
+        0.3324922904401458,
+        0.632744603308102
+      ],
+      "new_points": [
+        "Up"
+      ]
+    },
+    {
+      "e_move": 6,
+      "id": "l6",
+      "op": "line",
+      "references": [
+        "W",
+        "A"
+      ],
+      "geometry": [
+        1.0,
+        1.045,
+        -0.8
+      ],
+      "new_points": [
+        "S"
+      ]
+    },
+    {
+      "e_move": 7,
+      "id": "l7",
+      "op": "line",
+      "references": [
+        "U",
+        "C"
+      ],
+      "geometry": [
+        1.0,
+        0.8571428571428571,
+        1.0
+      ],
+      "new_points": [
+        "Sp"
+      ]
+    },
+    {
+      "e_move": 8,
+      "id": "l8",
+      "op": "line",
+      "references": [
+        "U",
+        "Vp"
+      ],
+      "geometry": [
+        1.0,
+        0.6373626373626373,
+        1.0
+      ],
+      "new_points": []
+    },
+    {
+      "e_move": 9,
+      "id": "l9",
+      "op": "line",
+      "references": [
+        "V",
+        "Up"
+      ],
+      "geometry": [
+        1.0,
+        -1.3893129770992367,
+        -1.0
+      ],
+      "new_points": [
+        "J"
+      ]
+    },
+    {
+      "e_move": 10,
+      "id": "l10",
+      "op": "line",
+      "references": [
+        "S",
+        "Up"
+      ],
+      "geometry": [
+        1.0,
+        -1.6864718405264176,
+        -1.281788271724405
+      ],
+      "new_points": [
+        "H"
+      ]
+    },
+    {
+      "e_move": 11,
+      "id": "axis",
+      "op": "line",
+      "references": [
+        "J",
+        "H"
+      ],
+      "geometry": [
+        1.0,
+        -1.5588235294117647,
+        -1.1672794117647058
+      ],
+      "new_points": [
+        "X0",
+        "X1"
+      ]
+    },
+    {
+      "e_move": 12,
+      "id": "edge_A_0",
+      "op": "line",
+      "references": [
+        "X0",
+        "A"
+      ],
+      "geometry": [
+        1.0,
+        1.7411735652532525,
+        -0.8
+      ],
+      "new_points": [
+        "Y0"
+      ]
+    },
+    {
+      "e_move": 13,
+      "id": "edge_B_0",
+      "op": "line",
+      "references": [
+        "Y0",
+        "B"
+      ],
+      "geometry": [
+        1.0,
+        -0.010152946609377267,
+        0.6050764733046887
+      ],
+      "new_points": [
+        "Z0"
+      ]
+    },
+    {
+      "e_move": 14,
+      "id": "edge_C_0",
+      "op": "line",
+      "references": [
+        "Z0",
+        "X0"
+      ],
+      "geometry": [
+        1.0,
+        -2.367555354721137,
+        -1.2572887483047959
+      ],
+      "new_points": []
+    }
+  ],
+  "targets": [
+    {
+      "vertices": [
+        "X0",
+        "Y0",
+        "Z0"
+      ],
+      "edges": [
+        "edge_A_0",
+        "edge_B_0",
+        "edge_C_0"
+      ],
+      "vertices_at": 13,
+      "edges_at": 14
+    }
+  ]
+}

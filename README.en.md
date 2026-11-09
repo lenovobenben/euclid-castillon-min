@@ -5,14 +5,38 @@
 **Draw one solution triangle with 14 lines, or both solution triangles with 17 lines. No additional circles are drawn.**
 
 Given a circle, its center, and three points, construct an inscribed triangle whose side
-lines respectively pass through those points. This project provides elementary traces,
+lines respectively pass through those points. This project provides step-by-step animations, elementary traces,
 general-parameter proofs, independent exact verification, solution classification, and bounded searches.
 **14 and 17 E are verified generic upper bounds. Global minimality and full-domain robust bounds remain open.**
 
-[Construction and proof](docs/CONSTRUCTION.md) · [Input classification](docs/CLASSIFICATION.md) ·
-[Certificates](experiments/results/baseline.json) · [Verification](experiments/results/sage-verification.json)
+[Watch the 17 E two-solution animation](animations/castillon/media/CastillonBoth_4k60.mp4) ·
+[14 E single-solution animation](animations/castillon/media/CastillonOne_4k60.mp4) ·
+[Construction and proof](docs/CONSTRUCTION.md) · [Exact verification](experiments/results/sage-verification.json)
 
-Manim animations will be added later. Detailed mathematical documents are currently in Chinese.
+[![17 E construction of both solutions](animations/castillon/preview.png)](animations/castillon/media/CastillonBoth_4k60.mp4)
+
+*Click the preview to view or download the two-solution animation, 3840 × 2160, 60 fps, approximately 67 seconds.*
+
+## Explore the constructions
+
+| Animation | Target | Duration | Video |
+|---|---|---:|---|
+| One solution in 14 E | One complete triangle, using 14 lines | About 58 seconds | [4K60 MP4](animations/castillon/media/CastillonOne_4k60.mp4) |
+| Both solutions in 17 E | Two complete triangles, using 17 lines | About 67 seconds | [4K60 MP4](animations/castillon/media/CastillonBoth_4k60.mp4) |
+
+The videos use a dark blue background, Chinese captions, and thin lines. Magenta denotes free inputs,
+gold the current move, pale blue auxiliary objects, and green the targets. Each draw highlights
+its two existing reference points and shows the cumulative E count. The visual style follows
+[Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min).
+
+Geometry is exported from exact replay and checked against the committed certificate. The videos use
+the `inside` fixture, with all three given points inside the circle. The fixed-point axis is drawn
+at move 11, followed by the triangle sides. Each video starts from the free inputs, sharing the
+first 14 moves. All vertices appear at move 16 in the two-solution video. The independent 15 E
+vertex-only program omits the final side of the first triangle.
+
+See the [animation guide](animations/castillon/README.md) for geometry export, viewport tests,
+and rendering commands. Detailed mathematical documents are currently in Chinese.
 
 ## Current verified upper bounds
 
@@ -90,10 +114,18 @@ and minimality are separate evidence. Exact decisions use no tolerance; python -
 
 ## Reproduction
 
-Python 3.10+ standard library runs the six regression checks:
+Python 3.10+ standard library runs the geometry, search, and animation-data regression checks:
 
 ```sh
 python3 -m unittest discover -v
+```
+
+The standard-library environment runs nine checks. With Manim installed, two additional viewport
+and line-clipping checks run. Regenerate the animation geometry with the following command.
+The [animation guide](animations/castillon/README.md) includes 4K60 rendering instructions.
+
+```sh
+python3 animations/castillon/export_geometry.py
 ```
 
 Independent SageMath 10.7 verification uses a pinned image, no network, and a read-only mount:
@@ -125,7 +157,8 @@ prefixes is not a global lower bound. See [ROADMAP](docs/ROADMAP.md) and [SEARCH
 | Existence, counts, and degeneracy | [CLASSIFICATION](docs/CLASSIFICATION.md) |
 | Full reproduction commands | [REPRODUCING](docs/REPRODUCING.md) |
 | Bounded searches already performed | [SEARCH](docs/SEARCH.md) |
-| Research and animation plans | [ROADMAP](docs/ROADMAP.md) |
+| Animations, geometry export, and rendering | [animations/castillon](animations/castillon/README.md) |
+| Research roadmap and presentation conventions | [ROADMAP](docs/ROADMAP.md) |
 | Sources and comparability | [LITERATURE](docs/LITERATURE.md) |
 | Research scripts | [experiments](experiments/README.md) |
 | Certificates and reports | [experiments/results](experiments/results/README.md) |

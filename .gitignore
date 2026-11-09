@@ -3,4 +3,6 @@ __pycache__/
 .venv/
 .DS_Store
 .ruff_cache/
-animations/**/media/
+animations/**/media/*
+!animations/castillon/media/CastillonOne_4k60.mp4
+!animations/castillon/media/CastillonBoth_4k60.mp4

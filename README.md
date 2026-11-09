@@ -5,13 +5,34 @@
 **只画 14 条直线，完成一个目标三角形；只画 17 条直线，完成两个目标三角形。**
 
 给定圆、圆心和三个点，研究 Cramer–Castillon 问题：作圆内接三角形，使三边所在直线
-分别经过给定点。本项目提供逐笔构造、一般参数证明、独立精确核验、解数分类及有界搜索。
+分别经过给定点。本项目提供逐步动画、逐笔构造、一般参数证明、独立精确核验、解数分类及有界搜索。
 **14、17 E 是一般位置上的已验证上界，尚未证明全局最小，完整域鲁棒上界待研究。**
 
-[构造与证明](docs/CONSTRUCTION.md) · [输入与解数](docs/CLASSIFICATION.md) ·
-[构造证书](experiments/results/baseline.json) · [验证报告](experiments/results/sage-verification.json)
+[观看 17 E 双解动画](animations/castillon/media/CastillonBoth_4k60.mp4) ·
+[14 E 单解动画](animations/castillon/media/CastillonOne_4k60.mp4) ·
+[构造与证明](docs/CONSTRUCTION.md) · [精确核验](experiments/results/sage-verification.json)
 
-Manim 动画后续补充。当前已有结果不依赖动画作数学判定。
+[![17 E 双解构造](animations/castillon/preview.png)](animations/castillon/media/CastillonBoth_4k60.mp4)
+
+*点击预览图查看或下载双解动画，3840 × 2160，60 fps，约 67 秒。*
+
+## 先看演示
+
+| 动画 | 完成的目标 | 时长 | 成片 |
+|---|---|---:|---|
+| 14 E 单解 | 一个完整三角形，14 条直线 | 约 58 秒 | [4K60 MP4](animations/castillon/media/CastillonOne_4k60.mp4) |
+| 17 E 双解 | 两个完整三角形，17 条直线 | 约 67 秒 | [4K60 MP4](animations/castillon/media/CastillonBoth_4k60.mp4) |
+
+动画采用深蓝背景、中文字幕和细线。洋红色表示免费输入，金色表示当前一笔，
+淡蓝色表示辅助对象，绿色表示目标。每次落笔前标出两个已有定位点，并显示累计 E。
+视觉风格参考 [Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min)。
+
+几何数据从精确重放导出，并逐项核对已提交证书。演示采用三个输入点均在圆内的
+`inside` 夹具，第 11 E 画出不动点轴，随后恢复三角形。
+两段视频各自从免费输入开始，共用前 14 E。双解片的全部顶点在第 16 E 出现；
+独立的 15 E 顶点程序省去第一解的补边动作。
+
+导出、镜头测试和渲染命令见 [动画说明](animations/castillon/README.md)。
 
 ## 当前已验证上界
 
@@ -87,10 +108,17 @@ $$
 
 ## 复现
 
-Python 3.10+ 标准库即可运行六项回归检查：
+Python 3.10+ 标准库即可运行几何、搜索和动画数据回归检查：
 
 ```sh
 python3 -m unittest discover -v
+```
+
+标准库环境运行 9 项检查，安装 Manim 后再运行 2 项镜头与直线裁剪检查。
+重新导出动画几何数据可执行以下命令，4K60 渲染步骤见 [动画说明](animations/castillon/README.md)。
+
+```sh
+python3 animations/castillon/export_geometry.py
 ```
 
 独立验证使用 SageMath 10.7，固定 Docker 镜像，断网运行并只读挂载项目：
@@ -110,7 +138,7 @@ docker run --rm --network none \
 
 优先突破完整单解的 14 E，再研究双解共享、混合圆前缀、直接目标命中和完整域退化修复。
 已有 9,878 个受限前缀的筛查不构成全局下界。
-研究优先级与未来 Manim 安排见 [ROADMAP](docs/ROADMAP.md)，已完成范围见 [SEARCH](docs/SEARCH.md)。
+研究优先级与 Manim 展示约定见 [ROADMAP](docs/ROADMAP.md)，已完成范围见 [SEARCH](docs/SEARCH.md)。
 
 ## 文档与代码入口
 
@@ -121,7 +149,8 @@ docker run --rm --network none \
 | 存在性、解数与退化 | [CLASSIFICATION](docs/CLASSIFICATION.md) |
 | 完整复现命令 | [REPRODUCING](docs/REPRODUCING.md) |
 | 已有搜索范围 | [SEARCH](docs/SEARCH.md) |
-| 研究路线与动画计划 | [ROADMAP](docs/ROADMAP.md) |
+| 动画、几何导出与渲染 | [animations/castillon](animations/castillon/README.md) |
+| 研究路线与展示约定 | [ROADMAP](docs/ROADMAP.md) |
 | 来源与计数可比性 | [LITERATURE](docs/LITERATURE.md) |
 | 研究脚本 | [experiments](experiments/README.md) |
 | 证书与报告 | [experiments/results](experiments/results/README.md) |

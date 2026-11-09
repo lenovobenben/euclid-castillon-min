@@ -20,7 +20,7 @@
 | 数据目录 | qq-ggb、proofs 等历史分层 | experiments/results | experiments/results | experiments/results |
 | 题目专属文档 | METRICS、FORMAL_MODEL、证书格式等 | MANNHEIM、GERGONNE、SHARED_INVERSION | EXISTENCE、NINE、LOWER_BOUND、REFINEMENTS | CONSTRUCTION、CLASSIFICATION、SEARCH |
 | 来源材料 | QQ 提供的 GGB，原作者未确认 | 历史构造及文献台账 | 原始问答快照、比赛题出处 | 经典不动点轴路线及文献台账 |
-| 展示 | Manim、离线网页、GeoGebra | Manim 动画 | 静态 SVG；Manim 待补 | Manim 待补 |
+| 展示 | Manim、离线网页、GeoGebra | Manim 动画 | 静态 SVG；Manim 待补 | 14 E / 17 E Manim 动画 |
 | 软件/内容许可 | Apache 2.0 / CC BY 4.0 | Apache 2.0 / CC BY 4.0 | 相同，保留来源快照权利 | 相同，保留第三方材料权利 |
 
 ## 2. 本次对齐的具体差异
@@ -86,7 +86,7 @@ profiles、schemas、sources、sage、qq-ggb、proofs 等按题目需要保留�
 仅需标准库的检查不额外要求 Sage；Windows PowerShell 入口可以作为兼容路径保留。
 文档应说明哪些操作打印到终端、哪些会更新报告，不隐含覆盖既有容器或来源快照。
 
-未来 Manim 的颜色角色沿用早期项目：免费输入洋红、当前动作金色、既有辅助对象淡蓝、目标绿色。
+Manim 的颜色角色沿用早期项目：免费输入洋红、当前动作金色、既有辅助对象淡蓝、目标绿色。
 每笔展示已有定位点和累计 E，轨迹来自精确重放；显示中的近似坐标不承担数学证明。
 
 ## 7. 旧项目只读与长期维护
