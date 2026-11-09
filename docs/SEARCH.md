@@ -52,5 +52,80 @@
 
 ## 下一轮应扩大什么
 
+新加入的 [严格割线起步路线](SECANT.md) 将首笔改为 AB，并复用逆向投影链。
+五笔取得三组对应点，第 9 E 得到不动点轴，完整单解和双解分别为 12、15 E。
+这一路线要求 AB 与 Γ 有两个不同实交点，验证报告同时给出三条输入点连线均不割圆的
+二解输入，明确该路线的覆盖缺口。
+
 优先加入以已有线线交点为中心的新弦、混合圆前缀和直接命中非起始顶点的目标。
 现有筛查未命中不能作为“14 E 最少”的证据。
+
+## 割线构造的进一步降步筛查
+
+以受限域的 9 E 轴、12 E 完整单解和 15 E 完整双解为基线，尝试在最多 8 E
+取得目标顶点、任一种顶点标签的共轭起点轴，或实际画出目标边。
+
+### 改变投影链顺序
+
+`search_secant_chords.py` 从 AB 出发，利用 I_A、I_B 都交换 U、V 的关系，
+枚举最多七笔的输入点弦线树，再筛查一条任意已有点连线或基础圆。
+最后一步的定位点包含已有弦的全部有限线线交点。
+
+| 前缀 E | 树数 | 至少三个对应点对 | 形式交叉弦轴候选的最低成本 |
+|---:|---:|---:|---:|
+| 1 | 1 | 0 | — |
+| 2 | 2 | 0 | — |
+| 3 | 5 | 0 | — |
+| 4 | 14 | 0 | — |
+| 5 | 42 | 2 | 9 E |
+| 6 | 132 | 20 | 10 E |
+| 7 | 429 | 121 | 10 E |
+
+共 625 个前缀。形式成本计算按顶点地址合并共享弦；实际有效性仍须几何核验。
+数值直接命中筛查给出两个初筛结果，均未通过精确目标关联检查。
+
+### 两笔混合辅助操作
+
+`search_secant_mixed.py` 固定五笔割线前缀，枚举第 6、7 E 的直线或基础圆，
+再筛查第 8 E 的直接目标命中。每次加入新对象，都计算其与全部已有对象的有限实交点，
+包含新圆与 Γ、旧线、新辅助圆的交点。
+
+第一笔扩展有 190 个去重图元，第二笔共检查 98,653 个状态。
+末笔同时筛查 X、Y、Z 三种起点标签及两个三角形的六条目标边。
+三个数值初筛结果来自同一组相切辅助圆，精确计算只得到一个交点，候选均被排除。
+
+### 精确复核与范围
+
+两组数值筛查均先使用 `inside` 夹具发现候选，再按对应几何地址在四个夹具上筛查。
+点合并及命中容差为 `2e-10`，去重图元键保留九位小数，可用点的坐标范数上限为 `1e5`。
+近乎平行、相切或距离很小的情形受浮点阈值影响。
+
+`verify_secant_search_sage.py` 使用独立 AA 实代数数运算，重建全部五个初筛候选。
+它从精确证书重建前缀，独立求出交点，检查定位点、重复图元和实际目标关联。
+全部五个候选在四个夹具上均未成立。
+四个夹具中的已知 9 E 轴程序均作为阳性校准通过。
+
+本轮未得到更短程序。数值去重、坐标截断、有限前缀及固定分支都限制了搜索范围，
+这些结果不构成 9 E 轴或 12/15 E 完整构造的全局下界。
+
+- [弦线树筛查记录](../experiments/results/secant-chords.json)
+- [混合两笔筛查记录](../experiments/results/secant-mixed.json)
+- [独立精确复核报告](../experiments/results/secant-search-verification.json)
+
+筛查需要 NumPy，可在现有 Manim 镜像内运行。以下命令打印结果，
+追加 `--output experiments/results/相应文件.json` 可更新对应筛查记录。
+
+```sh
+docker run --rm --network none -v "$PWD:/workspace" -w /workspace \
+  euclid-min-manim:0.21.0 python experiments/search_secant_chords.py
+docker run --rm --network none -v "$PWD:/workspace" -w /workspace \
+  euclid-min-manim:0.21.0 python experiments/search_secant_mixed.py
+```
+
+精确复核使用固定 SageMath 10.7 镜像，读取已保存的筛查记录并打印核验报告。
+
+```sh
+docker run --rm --network none -v "$PWD:/workspace:ro" -w /workspace \
+  sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
+  sage -python experiments/verify_secant_search_sage.py
+```

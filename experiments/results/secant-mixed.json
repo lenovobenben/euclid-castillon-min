@@ -1,0 +1,112 @@
+{
+  "scope": "two mixed moves after the fixed 5 E AB-secant prefix, then one finish",
+  "discovery_fixture": "inside",
+  "validation_fixtures": [
+    "outside_1",
+    "outside_2",
+    "mixed",
+    "inside"
+  ],
+  "epsilon": 2e-10,
+  "coordinate_bound": 100000.0,
+  "counts": {
+    "first": 190,
+    "second": 98653,
+    "raw_hits": 3
+  },
+  "raw_candidates": [
+    {
+      "prefix": [
+        {
+          "id": "s6",
+          "op": "circle",
+          "points": [
+            "T",
+            "C"
+          ]
+        },
+        {
+          "id": "s7",
+          "op": "circle",
+          "points": [
+            "l4&l3:0",
+            "C"
+          ]
+        }
+      ],
+      "final": {
+        "op": "line",
+        "points": [
+          "C",
+          "s7&s6:0"
+        ],
+        "goal": "edge",
+        "target": 5
+      }
+    },
+    {
+      "prefix": [
+        {
+          "id": "s6",
+          "op": "circle",
+          "points": [
+            "T",
+            "C"
+          ]
+        },
+        {
+          "id": "s7",
+          "op": "circle",
+          "points": [
+            "l4&l3:0",
+            "C"
+          ]
+        }
+      ],
+      "final": {
+        "op": "line",
+        "points": [
+          "C",
+          "s7&s6:1"
+        ],
+        "goal": "edge",
+        "target": 5
+      }
+    },
+    {
+      "prefix": [
+        {
+          "id": "s6",
+          "op": "circle",
+          "points": [
+            "T",
+            "C"
+          ]
+        },
+        {
+          "id": "s7",
+          "op": "circle",
+          "points": [
+            "l4&l3:0",
+            "C"
+          ]
+        }
+      ],
+      "final": {
+        "op": "line",
+        "points": [
+          "s7&s6:0",
+          "s7&s6:1"
+        ],
+        "goal": "edge",
+        "target": 5
+      }
+    }
+  ],
+  "candidates": [],
+  "calibration_nine_move_axis": true,
+  "duplicate_input_circle_rejected": true,
+  "max_first": null,
+  "minimality_proved": false,
+  "exact_validation_required": true
+}

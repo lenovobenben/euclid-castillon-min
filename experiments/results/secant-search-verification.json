@@ -1,0 +1,300 @@
+{
+  "calibration_nine_move_axis": {
+    "outside_1": true,
+    "outside_2": true,
+    "mixed": true,
+    "inside": true
+  },
+  "raw_candidate_checks": [
+    {
+      "search": "secant-mixed",
+      "candidate": {
+        "prefix": [
+          {
+            "id": "s6",
+            "op": "circle",
+            "points": [
+              "T",
+              "C"
+            ]
+          },
+          {
+            "id": "s7",
+            "op": "circle",
+            "points": [
+              "l4&l3:0",
+              "C"
+            ]
+          }
+        ],
+        "final": {
+          "op": "line",
+          "points": [
+            "C",
+            "s7&s6:0"
+          ],
+          "goal": "edge",
+          "target": 5
+        }
+      },
+      "fixtures": {
+        "outside_1": {
+          "exact_target_hit": false
+        },
+        "outside_2": {
+          "exact_target_hit": false
+        },
+        "mixed": {
+          "exact_target_hit": false
+        },
+        "inside": {
+          "exact_target_hit": false
+        }
+      }
+    },
+    {
+      "search": "secant-mixed",
+      "candidate": {
+        "prefix": [
+          {
+            "id": "s6",
+            "op": "circle",
+            "points": [
+              "T",
+              "C"
+            ]
+          },
+          {
+            "id": "s7",
+            "op": "circle",
+            "points": [
+              "l4&l3:0",
+              "C"
+            ]
+          }
+        ],
+        "final": {
+          "op": "line",
+          "points": [
+            "C",
+            "s7&s6:1"
+          ],
+          "goal": "edge",
+          "target": 5
+        }
+      },
+      "fixtures": {
+        "outside_1": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        },
+        "outside_2": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        },
+        "mixed": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        },
+        "inside": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        }
+      }
+    },
+    {
+      "search": "secant-mixed",
+      "candidate": {
+        "prefix": [
+          {
+            "id": "s6",
+            "op": "circle",
+            "points": [
+              "T",
+              "C"
+            ]
+          },
+          {
+            "id": "s7",
+            "op": "circle",
+            "points": [
+              "l4&l3:0",
+              "C"
+            ]
+          }
+        ],
+        "final": {
+          "op": "line",
+          "points": [
+            "s7&s6:0",
+            "s7&s6:1"
+          ],
+          "goal": "edge",
+          "target": 5
+        }
+      },
+      "fixtures": {
+        "outside_1": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        },
+        "outside_2": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        },
+        "mixed": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        },
+        "inside": {
+          "exact_target_hit": false,
+          "error": "'s7&s6:1'"
+        }
+      }
+    },
+    {
+      "search": "secant-chords",
+      "candidate": {
+        "prefix_e": 7,
+        "words": [
+          [],
+          [
+            "A"
+          ],
+          [
+            "A",
+            "C"
+          ],
+          [
+            "A",
+            "C",
+            "B"
+          ],
+          [
+            "A",
+            "C",
+            "B",
+            "A"
+          ],
+          [
+            "A",
+            "C",
+            "B",
+            "A",
+            "C"
+          ],
+          [
+            "A",
+            "C",
+            "B",
+            "A",
+            "C",
+            "B"
+          ],
+          [
+            "A",
+            "C",
+            "B",
+            "A",
+            "C",
+            "B",
+            "A"
+          ]
+        ],
+        "final": {
+          "op": "circle",
+          "points": [
+            "chord_ACBACBA&chord_ACBAC:0",
+            "p_ACBACBA"
+          ],
+          "goal": "vertex",
+          "target": 0
+        }
+      },
+      "fixtures": {
+        "outside_1": {
+          "exact_target_hit": false
+        },
+        "outside_2": {
+          "exact_target_hit": false
+        },
+        "mixed": {
+          "exact_target_hit": false
+        },
+        "inside": {
+          "exact_target_hit": false
+        }
+      }
+    },
+    {
+      "search": "secant-chords",
+      "candidate": {
+        "prefix_e": 7,
+        "words": [
+          [],
+          [
+            "A"
+          ],
+          [
+            "C"
+          ],
+          [
+            "C",
+            "A"
+          ],
+          [
+            "C",
+            "A",
+            "B"
+          ],
+          [
+            "C",
+            "A",
+            "B",
+            "C"
+          ],
+          [
+            "C",
+            "A",
+            "B",
+            "C",
+            "A"
+          ],
+          [
+            "C",
+            "A",
+            "B",
+            "C",
+            "A",
+            "B"
+          ]
+        ],
+        "final": {
+          "op": "circle",
+          "points": [
+            "chord_CABCAB&chord_CABC:0",
+            "p_CABCAB"
+          ],
+          "goal": "vertex",
+          "target": 5
+        }
+      },
+      "fixtures": {
+        "outside_1": {
+          "exact_target_hit": false
+        },
+        "outside_2": {
+          "exact_target_hit": false
+        },
+        "mixed": {
+          "exact_target_hit": false
+        },
+        "inside": {
+          "exact_target_hit": false
+        }
+      }
+    }
+  ],
+  "all_fixture_survivors": 0,
+  "minimality_proved": false
+}

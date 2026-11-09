@@ -70,6 +70,10 @@ Docker 参数、固定镜像和容器内脚本保持不变。安装本地 Sage 1
 
 验证器使用断言进行精确检查，不支持 python -O。数值可视化或浮点筛查不能替代核验。
 
+AB 严格割圆子域的 12/15 E 新构造使用 `experiments/replay_secant_seed.py` 生成证书，
+使用 `experiments/verify_secant_seed_sage.py` 执行独立重放与六参数核验。
+完整命令及适用域见 [割线构造](SECANT.md)。
+
 ## 7. Manim 动画
 
 14 E 单解与 17 E 双解使用已提交的 `inside` 夹具证书。

@@ -55,6 +55,23 @@ separately trimmed program; 15 E is not the first-hit time of the 17 E full prog
 `rob` covers the entire domain with worst-case actual drawing cost. Exceptional auxiliary
 coincidences and parallel defining lines have not yet all been repaired.
 
+### Restricted improvement with a proper AB secant
+
+When AB intersects Γ in two distinct real points, another generic construction gives these bounds.
+
+| Target | Restricted upper bound |
+|---|---:|
+| Three vertices of one solution | **11 E** |
+| One complete triangle | **12 E** |
+| All vertices of both solutions | **13 E** |
+| Both complete triangles | **15 E** |
+
+This includes generic two-solution inputs with all three given points inside the circle.
+Starting with AB makes two projection involutions exchange the same pair of circle points.
+Using the inverse map, five moves yield three image pairs, and move 9 draws the fixed-point axis.
+See the [secant construction](docs/SECANT.md) for six-parameter identities, 20 independent exact
+replays, and a two-solution input outside the secant domain.
+
 ### Free inputs and the two-solution domain
 
 Only Γ, its center O, and distinct noncollinear points A, B, C off Γ are free.
@@ -120,8 +137,9 @@ Python 3.10+ standard library runs the geometry, search, and animation-data regr
 python3 -m unittest discover -v
 ```
 
-The standard-library environment runs nine checks. With Manim installed, two additional viewport
-and line-clipping checks run. Regenerate the animation geometry with the following command.
+The standard-library environment runs twelve checks. The Manim environment runs three additional
+checks for viewports, line clipping, and numerical-search calibration. Regenerate the animation
+geometry with the following command.
 The [animation guide](animations/castillon/README.md) includes 4K60 rendering instructions.
 
 ```sh
@@ -154,6 +172,7 @@ prefixes is not a global lower bound. See [ROADMAP](docs/ROADMAP.md) and [SEARCH
 |---|---|
 | Inputs, targets, and claim levels | [DESIGN](docs/DESIGN.md) |
 | Elementary trace and proof | [CONSTRUCTION](docs/CONSTRUCTION.md) |
+| Restricted 12/15 E construction with an AB secant | [SECANT](docs/SECANT.md) |
 | Existence, counts, and degeneracy | [CLASSIFICATION](docs/CLASSIFICATION.md) |
 | Full reproduction commands | [REPRODUCING](docs/REPRODUCING.md) |
 | Bounded searches already performed | [SEARCH](docs/SEARCH.md) |

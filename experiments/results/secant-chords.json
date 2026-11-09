@@ -1,0 +1,171 @@
+{
+  "scope": "AB-seed pencil-chord trees and one arbitrary final line/circle",
+  "max_prefix": 7,
+  "statistics": [
+    {
+      "prefix_e": 1,
+      "trees": 1,
+      "three_pairs": 0,
+      "best_formal_axis_candidate": null
+    },
+    {
+      "prefix_e": 2,
+      "trees": 2,
+      "three_pairs": 0,
+      "best_formal_axis_candidate": null
+    },
+    {
+      "prefix_e": 3,
+      "trees": 5,
+      "three_pairs": 0,
+      "best_formal_axis_candidate": null
+    },
+    {
+      "prefix_e": 4,
+      "trees": 14,
+      "three_pairs": 0,
+      "best_formal_axis_candidate": null
+    },
+    {
+      "prefix_e": 5,
+      "trees": 42,
+      "three_pairs": 2,
+      "best_formal_axis_candidate": 9
+    },
+    {
+      "prefix_e": 6,
+      "trees": 132,
+      "three_pairs": 20,
+      "best_formal_axis_candidate": 10
+    },
+    {
+      "prefix_e": 7,
+      "trees": 429,
+      "three_pairs": 121,
+      "best_formal_axis_candidate": 10
+    }
+  ],
+  "discovery_fixture": "inside",
+  "validation_fixtures": [
+    "outside_1",
+    "outside_2",
+    "mixed",
+    "inside"
+  ],
+  "minimum_formal_axis_candidate": 9,
+  "raw_hits": 2,
+  "raw_candidates": [
+    {
+      "prefix_e": 7,
+      "words": [
+        [],
+        [
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "C",
+          "B"
+        ],
+        [
+          "A",
+          "C",
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "C",
+          "B",
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "C",
+          "B",
+          "A",
+          "C",
+          "B"
+        ],
+        [
+          "A",
+          "C",
+          "B",
+          "A",
+          "C",
+          "B",
+          "A"
+        ]
+      ],
+      "final": {
+        "op": "circle",
+        "points": [
+          "chord_ACBACBA&chord_ACBAC:0",
+          "p_ACBACBA"
+        ],
+        "goal": "vertex",
+        "target": 0
+      }
+    },
+    {
+      "prefix_e": 7,
+      "words": [
+        [],
+        [
+          "A"
+        ],
+        [
+          "C"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "C",
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "A",
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "A",
+          "B",
+          "C",
+          "A"
+        ],
+        [
+          "C",
+          "A",
+          "B",
+          "C",
+          "A",
+          "B"
+        ]
+      ],
+      "final": {
+        "op": "circle",
+        "points": [
+          "chord_CABCAB&chord_CABC:0",
+          "p_CABCAB"
+        ],
+        "goal": "vertex",
+        "target": 5
+      }
+    }
+  ],
+  "candidates": [],
+  "calibration_nine_move_axis": true,
+  "minimality_proved": false,
+  "exact_validation_required": true
+}
