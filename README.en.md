@@ -2,10 +2,11 @@
 
 [简体中文](README.md) · **English**
 
-**For two-solution inputs where line AB meets the circle at two distinct points, the general-case construction draws one triangle with 12 lines, or both with 15 lines.**
+**Given a circle, its center, and three points A, B, C, use an unmarked straightedge and compass to construct an inscribed triangle whose side lines pass through A, B, C, respectively.**
 
-Given a circle, its center, and three points, construct an inscribed triangle whose side
-lines respectively pass through those points. This project provides step-by-step animations, elementary traces,
+For two-solution inputs where line AB meets the circle at two distinct points, the general-case construction draws one triangle with 12 lines, or both with 15 lines.
+
+This project studies the Cramer–Castillon problem and provides step-by-step animations, elementary traces,
 general-parameter proofs, independent exact verification, solution classification, and bounded searches.
 **Global minimality and full-domain robust bounds remain open.**
 
